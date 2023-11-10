@@ -1,3 +1,2 @@
 # Graetmarlon.github.io
-# Check Below
-// Funny
+** This is quite cool**
