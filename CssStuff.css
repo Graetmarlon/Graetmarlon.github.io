@@ -1,0 +1,153 @@
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inconsolata', Helvetica, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateZ(40vmax) translateY(-20vmax) rotateZ(-5deg) rotateX(30deg) translate(0,0);
+    }
+
+    100% {
+        transform: translateZ(40vmax) translateY(-20vmax) rotateZ(-5deg) rotateX(30deg) translate(100px,0);
+    }
+}
+
+@keyframes ChangeBackground {
+    0% {
+        background-image: url('Assets/QuestionMarkFrames/QuestionMarkTexture.png');
+    }
+
+    50% {
+        background-image: url('Assets/QuestionMarkFrames/QuestionMarkTexture1.png');
+    }
+
+    100% {
+        background-image: url('Assets/QuestionMarkFrames/QuestionMarkTexture.png');
+    }
+}
+
+@keyframes ChangeBorder {
+    0% {
+        border-image-source: url('Assets/BorderFrames/Border-Image.png');
+    }
+
+    50% {
+        border-image-source: url('Assets/BorderFrames/Border-Image1.png');
+    }
+
+    100% {
+        border-image-source: url('Assets/BorderFrames/Border-Image.png');
+    }
+}
+
+@keyframes hueSwitch {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.BG {
+    position: absolute;
+    z-index: -500;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+    background-color: black;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.BG .gradient {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle,#00000000,#000000);
+    transform-style: preserve-3d; 
+}
+
+.BG .grid {
+    transform-origin: 50vmax 50vmax;
+    opacity: .05;
+    background-size: 100px 100px;
+    height: 200vh;
+    width: 100vw;
+    animation: ChangeBackground .5s ease-in-out infinite, moveBackground 5s linear infinite;
+    backface-visibility: visible;
+    transform-style: preserve-3d; 
+}
+.BG .FinalBackground {
+    position: absolute;
+    background-image: url(Assets/Background.png);
+    opacity: .5;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-size: 500px 500px;
+    filter: blur(2px);
+}
+
+.Center-Orgin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+
+    display: inline-block;
+    transform-style: preserve-3d; 
+}
+
+.Center-Orgin .Title-Logo .LOGO {
+    background-image: url(Assets/Logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: hueSwitch 10s linear infinite;
+}
+ 
+.Center-Orgin .Title-Logo {
+    padding: auto;
+}
+
+.Center-Orgin .Title-Logo .h1 {
+    background-size: contain;
+    padding: auto;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color:rgb(109, 109, 109)
+}
+
+div.CustomLine {
+    background-color: #ffffff;
+    text-align: center;
+    opacity: .2;
+    width: 100%; height: 2px;
+}
+
+img.RblxIcon, img.YouTubeIcon {
+    width: 150px;
+    height: auto;
+}
+
+a {
+    image-rendering: pixelated;
+}
