@@ -1,0 +1,175 @@
+body {
+    background-color: #000000;
+    font-family: 'Poppins';
+    cursor: url("Assets/MouseFolder/ArrowFarCursor.png"), auto;
+}
+
+.BG {
+    position: absolute;
+    z-index: -500;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+    background-color: #000000;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.BG .grid {
+    position: absolute;
+
+    opacity: .05;
+    background-size: 100px 100px;
+    width: 200%;
+    height: 200%;
+
+    animation: ChangeBackground .5s ease-in-out infinite, moveBackground 5s linear infinite;
+    backface-visibility: visible;
+    transform-style: preserve-3d; 
+}
+
+.BG .gradient {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle,#00000000,#000000);
+    transform-style: preserve-3d; 
+}
+
+.BG .FinalBackground {
+    position: absolute;
+    background-image: url(Assets/BackgroundStuff/Background.png);
+    opacity: .5;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-size: 500px 500px;
+    filter: blur(2px);
+}
+
+.Title .Title-Logo {
+
+    transform: translateX(12.5vw);
+    
+    width: 75vw;
+    height: 25vh;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(Assets/LogoFolder/December.png);
+    animation: hueSwitch 10s linear infinite;
+}
+.Title .Text_ {
+text-align: center;
+}
+
+div.CustomLine {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(Assets/stripes.png);
+    background-size: 50px 50px;
+    text-align: center;
+    opacity: .2;
+    transform: translateX(12.5vw);
+    width: 75vw; height: 4px;
+}
+
+h2.Header {
+    color: #ffffff;
+    text-align: center;
+    font-size: x-large;
+}
+h1.Text_ {
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
+    transform: translateX(15.5%);
+    width: 75%;
+}
+h1.BlogText_ {
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
+}
+
+h1.TransparentText_ {
+    color:#474747;
+    text-align: center;
+}
+
+h1.RainbowText_ {
+    color: #ff0000;
+    animation: hueSwitch 5s ease-in-out infinite;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    background-color: #1b1b1b94;
+    backdrop-filter: blur(2px);
+}
+
+aside.Left, aside.Right {
+    flex: 2.5%;
+}
+
+div.Center {
+    flex: 1%;
+}
+
+div.Scroll_ {
+    width: 100%; height: 20vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+
+img.Icon {
+    width: 150px;
+    height: auto;
+}
+
+a {
+    cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
+    image-rendering: pixelated;
+}
+/* Animation Stuff */
+@keyframes ChangeBackground {
+    0% {
+        background-image: url('Assets/BackgroundStuff/QuestionMarkTexture.png');
+    }
+
+    50% {
+        background-image: url('Assets/BackgroundStuff/QuestionMarkTexture1.png');
+    }
+
+    100% {
+        background-image: url('Assets/BackgroundStuff/QuestionMarkTexture.png');
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateZ(40vmax) translateY(-20vmax) rotateZ(-5deg) rotateX(30deg) translate(0,0);
+    }
+
+    100% {
+        transform: translateZ(40vmax) translateY(-20vmax) rotateZ(-5deg) rotateX(30deg) translate(-100px,0);
+    }
+}
+
+@keyframes hueSwitch {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
