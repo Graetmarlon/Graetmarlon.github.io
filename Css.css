@@ -87,6 +87,12 @@ h2.Header {
     font-size: x-large;
 }
 
+h3.Header {
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
+}
+
 h2.project {
     color: #fff;
     text-align: center;
