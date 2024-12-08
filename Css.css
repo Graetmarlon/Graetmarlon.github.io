@@ -140,8 +140,9 @@ div.Scroll_ {
 
 div.GalleryScroll_ {
     transform: translateX(12.5vw);
+    /* max-width: 30% */
+    width: 75vw; max-height: 50vh;
 
-    width: 75vw; height: 50vh;
     overflow-y: scroll;
     scrollbar-width: thin;
     text-align: center;
