@@ -161,10 +161,15 @@ img.Icon {
 }
 
 img.GameBackground {
-    width: 90%;
+    width: 60%;
     height: auto;
-    padding: 4px;
+    padding: 5px;
 }
+
+li.project {
+    text-align: center; height: 40%; max-width: 40%; list-style: none;
+}
+
 
 a {
     cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
