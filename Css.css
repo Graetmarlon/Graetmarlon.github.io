@@ -136,6 +136,12 @@ img.Icon {
     height: auto;
 }
 
+img.GameBackground {
+    width: 40%;
+    height: auto;
+    padding: 4px;
+}
+
 a {
     cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
     image-rendering: pixelated;
