@@ -14,6 +14,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     </head>
+
+    <script>
+        const randomTexts = [
+            "[Hello, World!]",
+            "[Nohting To See Here]",
+            "[YEAHHH]",
+            "[Certified Text Randomizer]",
+        ];
+
+        function generateRandomText() {
+            const randomIndex = Math.floor(Math.random() * randomTexts.length);
+            return randomTexts[randomIndex];
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const randomTextElement = document.querySelector(".RainbowText_");
+            randomTextElement.textContent = generateRandomText();
+        });
+    </script>
+
     <!-- Main Stuff -->
 
     <element class="BG">
@@ -52,22 +72,34 @@
                 <h2 class="Header">[ MORE MEDIA LINKS]</h2>
                 <!-- <h1 class="Text_">TEXT GOES HERE</h1> -->
                 <section class="MainButton" style="text-align: center;padding: 10px;">
-                    <a href="https://alt.wayland.best/"><img class="t88x31" src="Assets/Media/Alternate.gif" title="..."></a>
+                    <a href="https://alt.wayland.best/"><img class="t88x31" src="Assets/Media/Alternate.gif" title="My button!"></a>
                     <a href="https://icosahedr.online/"><img class="t88x31" src="Assets/Media/sapbutton.gif" title="..."></a>
-                    <a href="https://jecket.xyz/#"><img class="t88x31" src="Assets/Media/jecket.gif" title="..."></a>
+                    <a href="https://ryzzica.xyz/#"><img class="t88x31" src="Assets/Media/jecket.gif" title="feeling ryzzy"></a>
                     <a href="https://mayf.pink/"><img class="t88x31" src="Assets/Media/mayf.gif" title="..."></a>
-                    <a href="https://theabsoluterealm.com/"><img class="t88x31" src="Assets/Media/absolute-realm.gif" title="..."></a>
+                    <a href="https://theabsoluterealm.com/"><img class="t88x31" src="Assets/Media/absolute-realm.gif" title="the"></a>
                 </section>
             </aside>
         </div>
         <div class="CustomLine"></div>
         <div class="Center">
             <h2 class="Header">[SITE LINKS]</h2>
+            <h2 class="Header">guh</h2>
+        </div>
+        
+        <div class="CustomLine"></div>s
+        <div class="Center">
+            <h2 class="Header">[MY STUFF]</h2>
             <section class="MainButton" style="text-align: center;padding: 10px;">
-                <a href="https://www.roblox.com/games/14536336419/test-town"><img class="GameBackground" src="Assets/GameBackgrounds/TestTown.png" title="silly"></a>
-                <a href="https://www.roblox.com/games/14536336419/test-town"><img class="GameBackground" src="Assets/GameBackgrounds/TestTown2.png" title="..."></a>
-                <a href="https://www.roblox.com/games/14536336419/test-town"><img class="GameBackground" src="Assets/GameBackgrounds/TestTown.png" title="..."></a>
-                <a href="https://www.roblox.com/games/14536336419/test-town"><img class="GameBackground" src="Assets/GameBackgrounds/TestTown2.png" title="..."></a>
+                <li class="project" style="text-align: center;height: 40%;max-width: 40%;">
+                    <a href="https://www.roblox.com/games/14536336419/test-town"><img class="GameBackground" src="Assets/GameBackgrounds/TestTown.png" title="silly"></a>
+                    <a href="https://www.roblox.com/games/14536336419/test-town"><h2 class="project">Test Town</h2></a>
+                    <h3 class="body">[MY STUFF]</h3>
+                </li>
+                <li class="project" style="text-align: center;height: 40%;max-width: 40%;">
+                    <a href="https://www.roblox.com/games/14536336419/test-town"><img class="GameBackground" src="Assets/GameBackgrounds/TestTown2.png" title="silly"></a>
+                    <a href="https://www.roblox.com/games/14536336419/test-town"><h2 class="project">Test Town</h2></a>
+                    <h3 class="body">[MY STUFF]</h3>
+                </li>
             </section>
         </div>
 

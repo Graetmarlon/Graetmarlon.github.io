@@ -86,6 +86,20 @@ h2.Header {
     text-align: center;
     font-size: x-large;
 }
+
+h2.project {
+    color: #fff;
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+h3.body {
+    color: #ffffff;
+    text-align: center;
+    font-size: medium;
+}
+
 h1.Text_ {
     color: #ffffff;
     text-align: center;
@@ -116,6 +130,7 @@ h1.RainbowText_ {
     backdrop-filter: blur(2px);
 }
 
+
 aside.Left, aside.Right {
     flex: 2.5%;
 }
@@ -130,6 +145,10 @@ div.Scroll_ {
     scrollbar-width: thin;
 }
 
+li.project {
+    display: inline-block;
+}
+
 
 img.Icon {
     width: 150px;
@@ -137,7 +156,7 @@ img.Icon {
 }
 
 img.GameBackground {
-    width: 40%;
+    width: 90%;
     height: auto;
     padding: 4px;
 }
