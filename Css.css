@@ -93,19 +93,6 @@ h3.Header {
     font-size: large;
 }
 
-h2.project {
-    color: #fff;
-    text-align: center;
-    font-size: x-large;
-    text-decoration: underline;
-}
-
-h3.body {
-    color: #ffffff;
-    text-align: center;
-    font-size: medium;
-}
-
 h1.Text_ {
     color: #ffffff;
     text-align: center;
@@ -151,27 +138,71 @@ div.Scroll_ {
     scrollbar-width: thin;
 }
 
-li.project {
-    display: inline-block;
+div.GalleryScroll_ {
+    transform: translateX(12.5vw);
+
+    width: 75vw; height: 50vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    text-align: center;
 }
+img.GalleryImage {
+    width: 25%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 1%;
+}
+/* 
+li.project {
+    
+} */
 
 img.Icon {
     width: 150px;
     height: auto;
 }
 
-img.GameBackground {
-    width: 60%;
-    height: auto;
-    padding: 5px;
+li.project {
+    display: inline-block;
+    text-align: center; height: 30%; max-width: 30%; list-style: none;
+    padding: 10px;
 }
 
-li.project {
-    text-align: center; height: 40%; max-width: 40%; list-style: none;
+h3.ProjectDescription {
+    color: #ffffff;
+    text-align: center;
+    font-size: 100%;
+
+    /* transform: translateX(50%); */
+
+    width: 100%;
 }
+
+h2.ProjectName {
+    color: #fff;
+    text-align: center;
+    font-size: 100%;
+    text-decoration: underline;
+    /* transform: translateX(%); */
+
+    width: 100%;
+}
+
+
+img.GameBackground {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+}
+
 
 
 a {
+    cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
+    /* image-rendering: pixelated; */
+}
+a.ButtonIcon {
     cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
     image-rendering: pixelated;
 }
