@@ -128,10 +128,15 @@
       <aside class="Left">
         <h2 class="Header">[GALLERY]</h2>
         <div class="Scroll_">
-          <img class="GalleryImage" src="Assets/Gallery/Angle.png" title="silly angle" data-id="img1" data-gradient="linear-gradient(180deg, #ca690f6c, #ca0f0f)">
-          <img class="GalleryImage" src="Assets/Gallery/Ascenders.png" title="ascenders concept" data-id="img2" data-gradient="linear-gradient(180deg, #eecba96c, #feb47b)">
-          <img class="GalleryImage" src="Assets/Gallery/Alternate.png" title="alternate character" data-id="img3" data-gradient="linear-gradient(180deg, #b4b0ac6c, #464442)">
-          <img class="GalleryImage" src="Assets/Gallery/PeaceandTranquility.png" title="tranquil scene" data-id="img4" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
+          <img class="GalleryImage" src="Assets/Gallery/Angle.png" title="Angle" data-id="AngleArt" data-gradient="linear-gradient(180deg, #ca690f6c, #ca0f0f)">
+          <img class="GalleryImage" src="Assets/Gallery/Ascenders.png" title="Friends" data-id="DeveloperArt" data-gradient="linear-gradient(180deg, #eecba96c, #feb47b)">
+          <img class="GalleryImage" src="Assets/Gallery/Alternate.png" title="Alternate" data-id="Alternate" data-gradient="linear-gradient(180deg, #b4b0ac6c, #464442)">
+          <img class="GalleryImage" src="Assets/Gallery/PeaceandTranquility.png" title="Anukriti" data-id="Anukriti" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
+          <img class="GalleryImage" src="Assets/Gallery/CoolKidArt-Alt.png" title="CoolKid" data-id="CookkidArt" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)" data-width="75vh"data-height="75vh">
+          <img class="GalleryImage" src="Assets/Gallery/Alternate1.png" title="AlternateAlt" data-id="Alternate_1" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
+          <img class="GalleryImage" src="Assets/Gallery/Alternate2.png" title="AlternateAlt1" data-id="Alternate_2" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)" data-width="90vh"data-height="90vh">
+          <img class="GalleryImage" src="Assets/Gallery/Lethal.png" title="Lethal_Company" data-id="Lethal_CompanyArt" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)" data-width="90vh"data-height="90vh">
+          <img class="GalleryImage" src="Assets/Gallery/ElementAndGumballer.png" title="Gum" data-id="ElementFanart" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
         </div>
       </aside>
 
@@ -221,10 +226,15 @@
 
   <!-- Gallery Templates -->
   <div id="galleryTemplates" style="display: none;">
-    <div id="img1" data-text="He's kinda weird.. and strict."></div>
-    <div id="img2" data-text="With the power of AA, nothing can stop us!"></div>
-    <div id="img3" data-text="Hello Alternate."></div>
-    <div id="img4" data-text="Anukriti!!"></div>
+    <div id="AngleArt" data-text="He's kinda weird.. and strict."></div>
+    <div id="DeveloperArt" data-text="With the power of AA, nothing can stop us!"></div>
+    <div id="Alternate" data-text="Hello Alternate."></div>
+    <div id="Anukriti" data-text="Anukriti!!"></div>
+    <div id="CookkidArt" data-text="Peak!"></div>
+    <div id="Alternate_1" data-text="Hello Alternate."></div>
+    <div id="Alternate_2" data-text="Hello Alternate."></div>
+    <div id="Lethal_CompanyArt" data-text="Lethal"></div>
+    <div id="ElementFanart" data-text="ITS GUMBALLER!"></div>
   </div>
 
   <!-- JavaScript Logic -->
@@ -254,7 +264,7 @@
     const galleryOverlay = document.getElementById("galleryOverlay");
     const galleryPopupImage = document.getElementById("galleryPopupImage");
     const galleryPopupText = document.getElementById("galleryPopupText");
-
+    const galleryPopup = document.getElementById("galleryPopup");
     document.querySelectorAll('.GalleryImage').forEach(img => {
     img.addEventListener('click', () => {
         const id = img.dataset.id;
@@ -267,6 +277,11 @@
         text.textContent = template?.dataset.text || "No description.";
         galleryOverlay.style.background = gradient;
 
+        const customWidth = img.getAttribute('data-width');
+        const customHeight = img.getAttribute('data-height');
+        image.style.maxWidth = customWidth ? customWidth : 'auto';
+        image.style.maxHeight = customHeight ? customHeight : 'auto';
+
         galleryOverlay.style.display = 'flex';
     });
     });
@@ -278,6 +293,7 @@
     }
 
     galleryOverlay.addEventListener("click", closeGallery);
+    galleryPopup.addEventListener("click", closeGallery);
   </script>
 </body>
 </html>
