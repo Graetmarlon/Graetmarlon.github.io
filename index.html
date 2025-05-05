@@ -23,6 +23,118 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <style> 
+  body {
+        font-family: 'Source Code Pro';
+    }
+
+    .BG {
+        position: absolute;
+        z-index: -500;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 150%;
+
+        perspective: 2000px;
+        perspective-origin: 50% 50%;
+        background-color: var(--BackgroundColor);
+        transform-style: preserve-3d;
+        overflow: hidden;
+    }
+
+
+    div.Main-container {
+        width: 60%;
+        height: 100%;
+        margin: auto;
+        background-color: var(--BackgroundColor);
+        padding: 20px;
+        animation: fadeIn 0.5s ease-in-out;
+        border: 2px solid var(--primary);
+        border-radius: 0 0 0px 0px;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+    p {
+        color: var(--primary);
+        size: 10px;
+
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+    }
+    .Section {
+        position: relative;
+        background-color: inherit;
+        padding: 1rem;
+        border: 2px solid var(--primary);
+        margin: 1.5rem 0px;
+        height: 51vh;
+    }
+    .Section-Title {
+        display: inline;
+        position: absolute;
+        top: 3px;
+        line-height: 1;
+        margin: -0.5rem 0px 0px;
+
+        background: var(--BackgroundColor);
+        color: var(--primary);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 16px;
+    }
+    .Scroll_ {
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+    .Image {
+        border: 2px solid var(--primary);
+        padding: 2%;
+        width: 44%;
+        height: 44%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        user-select: none;
+    }
+    aside.Left {
+        flex: 1;
+    }
+    aside.Right {
+        flex: 2;
+    }
+
+    summary.Sum{
+        color: var(--orange);
+        user-select: none;
+    }
+    li {
+        color: var(--primary);
+    }
+
+    .Color {
+        color: var(--orange);
+    }
+    .Color1 {
+        color: var(--SlightlyOrange);
+    }
+
+    @keyframes moveBackground {
+        0% {
+            transform: translateZ(40vmax) translateY(-20vmax) translate(0,0);
+        }
+
+        100% {
+            transform: translateZ(40vmax) translateY(-20vmax) translate(-100px,0);
+        }
+    }
+  </style>
 </head>
 
 <body>
