@@ -1,5 +1,8 @@
 body {
-    font-family: 'Source Code Pro';
+    background-color: #000000;
+    font-family: 'Poppins';
+    cursor: url("Assets/MouseFolder/ArrowFarCursor.png"), auto;
+
 }
 
 .BG {
@@ -8,103 +11,310 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 150%;
+    height: 200%;
 
     perspective: 2000px;
     perspective-origin: 50% 50%;
-    background-color: var(--BackgroundColor);
+    background-color: #000000;
     transform-style: preserve-3d;
     overflow: hidden;
 }
 
-
-div.Main-container {
-    width: 60%;
-    height: 100%;
-    margin: auto;
-    background-color: var(--BackgroundColor);
-    padding: 20px;
-    animation: fadeIn 0.5s ease-in-out;
-    border: 2px solid var(--primary);
-    border-radius: 0 0 0px 0px;
-    overflow-y: auto;
-    box-sizing: border-box;
-}
-p {
-    color: var(--primary);
-    size: 10px;
-
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-}
-.Section {
-    position: relative;
-    background-color: inherit;
-    padding: 1rem;
-    border: 2px solid var(--primary);
-    margin: 1.5rem 0px;
-    height: 51vh;
-}
-.Section-Title {
-    display: inline;
+.BG .grid {
     position: absolute;
-    top: 3px;
-    line-height: 1;
-    margin: -0.5rem 0px 0px;
 
-    background: var(--BackgroundColor);
-    color: var(--primary);
-    overflow: hidden;
-    white-space: nowrap;
+    opacity: .05;
+    background-size: 100px 100px;
+    width: 200%;
+    height: 200%;
+
+    animation: ChangeBackground .5s ease-in-out infinite, moveBackground 5s linear infinite;
+    backface-visibility: visible;
+    transform-style: preserve-3d; 
 }
-.container {
-    display: flex;
-    flex-direction: row;
-    column-gap: 16px;
-}
-.Scroll_ {
+
+.BG .gradient {
+    position: absolute;
+    z-index: 1;
     width: 100%;
-    overflow-y: scroll;
-    scrollbar-width: thin;
+    height: 100%;
+    background: radial-gradient(circle,#00000000,#000000);
+    transform-style: preserve-3d; 
 }
-.Image {
-    border: 2px solid var(--primary);
-    padding: 2%;
-    width: 44%;
-    height: 44%;
+
+.BG .FinalBackground {
+    position: absolute;
+    /* background-image: url(Assets/BackgroundStuff/Background.png); */
+    background-image: url(Assets/HTML_BACKGROUND/gradient.png);
+    opacity: 1;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: 500px 500px;
+    filter: blur(2px);
+}
+
+.Title .Title-Logo {
+
+    transform: translateX(12.5vw);
+    
+    width: 75vw;
+    height: 25vh;
+
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    user-select: none;
+    background-image: url(Assets/LogoFolder/December.png);
+    animation: hueSwitch 10s linear infinite;
 }
-aside.Left {
-    flex: 1;
-}
-aside.Right {
-    flex: 2;
+.Title .Text_ {
+text-align: center;
 }
 
-summary.Sum{
-    color: var(--orange);
-    user-select: none;
-}
-li {
-    color: var(--primary);
+h3.Header {
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
 }
 
-.Color {
-    color: var(--orange);
+h1.Text_ {
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
+    transform: translateX(15.5%);
+    width: 75%;
 }
-.Color1 {
-    color: var(--SlightlyOrange);
+h1.BlogText_ {
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
+}
+
+h1.TransparentText_ {
+    color:#474747;
+    text-align: center;
+}
+
+h1.RainbowText_ {
+    color: #ff0000;
+    animation: hueSwitch 5s ease-in-out infinite;
+    text-align: center;
+}
+
+aside.Left, aside.Right {
+    flex: 2.5%;
+}
+
+div.Center {
+    flex: 1%;
+}
+
+div.GalleryScroll_ {
+    transform: translateX(12.5vw);
+    /* max-width: 30% */
+    width: 75vw; max-height: 50vh;
+
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    text-align: center;
+}
+/* 
+li.project {
+    
+} */
+
+img.Icon {
+    width: 150px;
+    height: auto;
+}
+
+li.project {
+    border: 4px solid #3f3f3f6b;
+    display: inline-block;
+    text-align: center; height: 41%; max-width: 41%; list-style: none;
+    padding: 20px;
+
+    margin: auto;
+}
+
+h3.ProjectDescription {
+    color: #ffffff;
+    text-align: center;
+    font-size: 100%;
+
+    /* transform: translateX(50%); */
+
+    width: 100%;
+}
+
+h2.ProjectName {
+    color: #fff;
+    text-align: center;
+    font-size: 100%;
+    text-decoration: underline;
+    /* transform: translateX(%); */
+
+    width: 100%;
+}
+
+
+img.GameBackground {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+}
+
+
+
+a {
+    cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
+    /* image-rendering: pixelated; */
+}
+a.ButtonIcon {
+    cursor: url("Assets/MouseFolder/ArrowCursorSelect.png"), pointer;
+    image-rendering: pixelated;
+}
+/* Animation Stuff */
+@keyframes ChangeBackground {
+    0% {
+        background-image: url('Assets/BackgroundStuff/QuestionMarkTexture.png');
+    }
+
+    50% {
+        background-image: url('Assets/BackgroundStuff/QuestionMarkTexture1.png');
+    }
+
+    100% {
+        background-image: url('Assets/BackgroundStuff/QuestionMarkTexture.png');
+    }
 }
 
 @keyframes moveBackground {
     0% {
-        transform: translateZ(40vmax) translateY(-20vmax) translate(0,0);
+        transform: translateZ(40vmax) translateY(-20vmax) rotateZ(-5deg) rotateX(30deg) translate(0,0);
     }
 
     100% {
-        transform: translateZ(40vmax) translateY(-20vmax) translate(-100px,0);
+        transform: translateZ(40vmax) translateY(-20vmax) rotateZ(-5deg) rotateX(30deg) translate(-100px,0);
     }
+}
+
+@keyframes hueSwitch {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* DISPLAY */
+div.Title-Logo {
+    transform: translateX(12.5vw);
+    
+    width: 75vw;
+    height: 25vh;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(Assets/LogoFolder/Normal.png);
+    animation: hueSwitch 10s linear infinite;
+}
+
+div.Main-container {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    background-color: #1f20417c;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid #4b3f72;
+    border-radius: 0 0 0px 0px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+div.Gallery-container {
+    transform: translateX(12.5vw);
+    /* max-width: 30% */
+    width: 75vw; max-height: 50vh;
+
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    text-align: center;
+}
+
+div.CustomLine {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(Assets/stripes.png);
+    background-size: 50px 50px;
+    text-align: center;
+    opacity: .2;
+    width: 100%; height: 10px;
+}
+
+.container {
+    display: flex;
+    background-color: #00000048;
+    backdrop-filter: blur(2px);
+    height: 50vh;
+}
+
+div.Scroll_ {
+    background-color: #1f204173;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid #4b3f72;
+
+    width: 100%; height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+img.GalleryImage {
+    border: 4px solid #3f3f3f6b;
+    width: 48%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* padding: 1%; */
+}
+
+div.InfoBackground {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    background-color: #1f20417c;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid #4b3f72;
+    border-radius: 0 0 0px 0px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* TEXT STUFF */
+h1 {
+    color:#ffffff;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+h2 {
+    color:#ffffff;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+p {
+    color:#ffffff;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+h2.Header {
+    color: #ffffff;
+    text-align: center;
+    font-size: 150%;
+    height: 25px;
 }

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alternate</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="PlaceholderTexture.ico" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="Css.css" />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="ScrollCustomization.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"/>
+
+  <!-- Gallery Overlay Styles -->
+  <style>
+    #galleryOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      animation: galleryOverlayAnim 0.35s ease forwards;
+    }
+
+    .galleryPopupContent {
+      background: #00000000;
+      padding: 16px;
+      border-radius: 10px;
+      max-width: 45%;
+      text-align: center;
+      position: relative;
+      opacity: 0;
+      transform: translateY(100px) scale(0.95) rotate(-10deg);
+      animation: fadeInUp 0.35s ease forwards;
+    }
+
+    #galleryPopupImage {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    #galleryPopupText {
+      margin-top: 2px;
+      font-size: 150%;
+    }
+
+    #galleryOverlay button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0);
+      }
+    }
+
+    @keyframes galleryOverlayAnim {
+        to {
+            opacity: 1;
+            background: --popup-gradient;
+        }
+    }
+
+    #gameInfoOverlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: scale(1.2);
+        animation: fadeInOverlay 0.3s ease forwards;
+    }
+    @keyframes fadeInOverlay {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Background Elements -->
+  <div class="BG">
+    <div class="gradient"></div>
+    <div class="grid"></div>
+    <div class="FinalBackground"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="Title-Logo"></div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="Main-container">
+    <h1>INTRODUCTION GOES HERE (`-`)</h1>
+    <p>
+      My name is Alternate, I make games, art, and sometimes music in my free time.
+      My interests include coding, drawing, and playing games such as Roblox or Lethal Company.
+      I'm a big fan of procedural generation, specifically dungeon generation.
+    </p>
+    <p>THIS IS A WIP WEB...</p>
+    <div class="CustomLine"></div>
+
+    <div class="container" style="padding: 10px;">
+      <!-- Gallery Section -->
+      <aside class="Left">
+        <h2 class="Header">[GALLERY]</h2>
+        <div class="Scroll_">
+          <img class="GalleryImage" src="Assets/Gallery/Angle.png" title="Angle" data-id="AngleArt" data-gradient="linear-gradient(180deg, #ca690f6c, #ca0f0f)">
+          <img class="GalleryImage" src="Assets/Gallery/Ascenders.png" title="Friends" data-id="DeveloperArt" data-gradient="linear-gradient(180deg, #eecba96c, #feb47b)">
+          <img class="GalleryImage" src="Assets/Gallery/Alternate.png" title="Alternate" data-id="Alternate" data-gradient="linear-gradient(180deg, #b4b0ac6c, #464442)">
+          <img class="GalleryImage" src="Assets/Gallery/PeaceandTranquility.png" title="Anukriti" data-id="Anukriti" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
+          <img class="GalleryImage" src="Assets/Gallery/CoolKidArt-Alt.png" title="CoolKid" data-id="CookkidArt" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)" data-width="75vh"data-height="75vh">
+          <img class="GalleryImage" src="Assets/Gallery/Alternate1.png" title="AlternateAlt" data-id="Alternate_1" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
+          <img class="GalleryImage" src="Assets/Gallery/Alternate2.png" title="AlternateAlt1" data-id="Alternate_2" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)" data-width="90vh"data-height="90vh">
+          <img class="GalleryImage" src="Assets/Gallery/Lethal.png" title="Lethal_Company" data-id="Lethal_CompanyArt" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)" data-width="90vh"data-height="90vh">
+          <img class="GalleryImage" src="Assets/Gallery/ElementAndGumballer.png" title="Gum" data-id="ElementFanart" data-gradient="linear-gradient(180deg, #ff72e46c, #934fce)">
+        </div>
+      </aside>
+
+      <!-- Games Section -->
+      <aside class="Right">
+        <h2 class="Header">[GAMES I'VE WORKED ON]</h2>
+     
+        <div class="Scroll_">
+          <!-- Game images -->
+          <img class="GameBackground" src="https://tr.rbxcdn.com/180DAY-2f0abd59aa69fd1168ea2f647c8b8a9f/768/432/Image/Webp/noFilter" title="Derivation Infestation" data-id="game1" style="max-width: 48%;">
+          <img class="GameBackground" src="Assets/GameBackgrounds/TestTown.png" title="Test Town" data-id="game2" style="max-width: 48%;">
+          <img class="GameBackground" src="https://tr.rbxcdn.com/180DAY-d0aceede005364c31a1392ba4ba569d4/768/432/Image/Webp/noFilter" title="Metro" data-id="game3" style="max-width: 48%;">
+          <img class="GameBackground" src="https://tr.rbxcdn.com/180DAY-7f4881320294feac1f1672abb8bd5689/768/432/Image/Webp/noFilter" title="MAZE PURGATORY" data-id="game4" style="max-width: 48%;">
+          <img class="GameBackground" src="https://tr.rbxcdn.com/180DAY-1a1f7e7b71ee4284ee8e6db6371a73f3/768/432/Image/Webp/noFilter" title="Everything All At Once" data-id="game5" style="max-width: 48%;">
+          <img class="GameBackground" src="Assets/GameBackgrounds/AA.png" title="ANIMA AULA" data-id="game6" style="max-width: 48%;">
+          <img class="GameBackground" src="Assets/GameBackgrounds/Splashdown.png" title="Splashdown" data-id="game7" style="max-width: 48%;">
+          <img class="GameBackground" src="https://tr.rbxcdn.com/180DAY-f5638f770ced6bbdea61ceb6ed5e01e4/768/432/Image/Webp/noFilter" title="Addition Abstraction" data-id="game8" style="max-width: 48%;">
+          <img class="GameBackground" src="https://tr.rbxcdn.com/180DAY-4516221100f9aabfcea2e040d0efe0da/768/432/Image/Webp/noFilter" title="Minus Elevation" data-id="game9" style="max-width: 48%;">
+        </div>
+      </aside>
+    </div>
+    <div class="CustomLine"></div>
+  </div>
+
+  <!-- Game Info Overlay -->
+  <div id="gameInfoOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.75); z-index:1000; justify-content:center; align-items:center;">
+    <div class="InfoBackground" style="width: 50%; height: 85%;" onclick="event.stopPropagation();">
+      <div id="gameContent"></div>
+      <button onclick="closeGameInfo()" style="position:absolute; top:10px; right:10px;">Close</button>
+    </div>
+  </div>
+
+  <!-- Game Info Templates -->
+  <div id="gameInfoTemplates" style="display: none;">
+    <div id="game1"><h2>Derivation Infestation</h2>
+        <p>Description Goes Here.</p>
+        <!-- <a href="https://www.roblox.com/games/77697185195450/Derivation-Infestation" target="_blank">Play on Roblox</a> -->
+        <div class="Scroll_">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/OldButton.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/ReworkedButton.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/GrassMap-Unused.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/UnusedMap1.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/UnnusedMap.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/Facility(OldVersion).png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/PowerOutage.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/OfficeSpace.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/DeveloperMap.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/LastVersionOfTheElevator.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/Fumes(Old).png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/OldToNew-Partyware.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/Partyware-render.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/DerivationInfestation/Ui-Rework(Unused).png" title="...">
+        </div>
+    </div>
+
+    <div id="game2"><h2>Test Town</h2>
+        <p>Description Goes Here.</p>
+
+        <div class="Scroll_">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/EarlyVersion.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/EarlyVersion1.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/EarlyVersionOfAStore.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/Huh.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/EarlyVersion2.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/Unused1.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/Facility.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/WhatIsThis.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/Halloween-post.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/Snowy-Post1.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/Snowy-Post.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/TestTown/BreakdownOfTestTown.png" title="...">
+        </div>
+          
+    </div>
+    <div id="game3"><h2>Metro</h2>
+        <p>Description Goes Here.</p>
+        <div class="Scroll_">
+            <img class="GalleryImage" src="Assets/ImageAssets/Metro/Subway.png" title="...">
+        </div>
+    </div>
+    <div id="game4"><h2>MAZE PURGATORY</h2>
+        <p>Description Goes Here.</p>
+        <div class="Scroll_">
+            <img class="GalleryImage" src="Assets/ImageAssets/MAZEPURGATORY/BirdsEyeViewOfHell.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/MAZEPURGATORY/OlderVersionOfTheEntity.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/MAZEPURGATORY/Entity.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/MAZEPURGATORY/OlderVersionOfTheMenu.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/MAZEPURGATORY/ClearViewOfTheExit.png" title="...">
+        </div>
+    </div>
+    <div id="game5"><h2>Everything All At Once</h2>
+        <p>Description Goes Here.</p>
+        <div class="Scroll_">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/Elevator-Varient.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/OldMap.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/JesterRender.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/VotingScreen.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/EmptyLobby.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/ElevatorRework.png" title="...">
+            <img class="GalleryImage" src="Assets/ImageAssets/EAAO/EarliestVersion.png" title="...">
+        </div>
+    </div>
+    <div id="game6"><h2>ANIMA AULA</h2>
+        <p>Description Goes Here.</p>
+    </div>
+    <div id="game7"><h2>Splashdown</h2>
+        <p>Description Goes Here.</p>
+    </div>
+
+    <div id="game8">
+            <h2>Addition Abstraction</h2>
+            <p>A math-based abstract puzzle game.</p>
+    </div>
+
+    <div id="game9"><h2>Minus Elevation</h2><p>A tactical descent into the unknown.</p></div>
+  </div>
+
+  <!-- Gallery Overlay -->
+  <div id="galleryOverlay" onclick="closeGallery()">
+    <div id="galleryPopup" class="galleryPopupContent" onclick="event.stopPropagation();">
+      <img id="galleryPopupImage" src="" alt="Gallery Image"/>
+      <p id="galleryPopupText"></p>
+    </div>
+  </div>
+
+  <!-- Gallery Templates -->
+  <div id="galleryTemplates" style="display: none;">
+    <div id="AngleArt" data-text="He's kinda weird.. and strict."></div>
+    <div id="DeveloperArt" data-text="With the power of AA, nothing can stop us!"></div>
+    <div id="Alternate" data-text="Hello Alternate."></div>
+    <div id="Anukriti" data-text="Anukriti!!"></div>
+    <div id="CookkidArt" data-text="Peak!"></div>
+    <div id="Alternate_1" data-text="Hello Alternate."></div>
+    <div id="Alternate_2" data-text="Hello Alternate."></div>
+    <div id="Lethal_CompanyArt" data-text="Lethal"></div>
+    <div id="ElementFanart" data-text="ITS GUMBALLER!"></div>
+  </div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    const gameOverlay = document.getElementById("gameInfoOverlay");
+    const gameContent = document.getElementById("gameContent");
+    const gameTemplates = document.getElementById("gameInfoTemplates");
+
+    document.querySelectorAll(".GameBackground").forEach(img => {
+      img.addEventListener("click", () => {
+        const id = img.dataset.id;
+        const game = gameTemplates.querySelector(`#${id}`);
+        if (game) {
+          gameContent.innerHTML = game.innerHTML;
+          gameOverlay.style.display = "flex";
+        }
+      });
+    });
+
+    function closeGameInfo() {
+      gameOverlay.style.display = "none";
+      gameContent.innerHTML = "";
+    }
+
+    gameOverlay.addEventListener("click", closeGameInfo);
+
+    const galleryOverlay = document.getElementById("galleryOverlay");
+    const galleryPopupImage = document.getElementById("galleryPopupImage");
+    const galleryPopupText = document.getElementById("galleryPopupText");
+    const galleryPopup = document.getElementById("galleryPopup");
+    document.querySelectorAll('.GalleryImage').forEach(img => {
+    img.addEventListener('click', () => {
+        const id = img.dataset.id;
+        const image = document.getElementById('galleryPopupImage');
+        const text = document.getElementById('galleryPopupText');
+        const template = galleryTemplates.querySelector(`#${id}`);
+        const gradient = img.getAttribute('data-gradient') || '#fff';
+
+        image.src = img.src;
+        text.textContent = template?.dataset.text || "No description.";
+        galleryOverlay.style.background = gradient;
+
+        const customWidth = img.getAttribute('data-width');
+        const customHeight = img.getAttribute('data-height');
+        image.style.maxWidth = customWidth ? customWidth : 'auto';
+        image.style.maxHeight = customHeight ? customHeight : 'auto';
+
+        galleryOverlay.style.display = 'flex';
+    });
+    });
+    
+    function closeGallery() {
+      galleryOverlay.style.display = "none";
+      galleryPopupImage.src = "";
+      galleryPopupText.textContent = "";
+    }
+
+    galleryOverlay.addEventListener("click", closeGallery);
+    galleryPopup.addEventListener("click", closeGallery);
+  </script>
+</body>
+</html>
+
+
+ <!-- <script>
+        const randomTexts = [
+            "[Hello, World!]",
+            "[Nothing To See Here]",
+            "[YEAHHH]",
+            "[Certified Text Randomizer]",
+        ];
+
+        function generateRandomText() {
+            const randomIndex = Math.floor(Math.random() * randomTexts.length);
+            return randomTexts[randomIndex];
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const randomTextElement = document.querySelector(".RainbowText_");
+            randomTextElement.textContent = generateRandomText();
+        });
+    </script> -->
+
+    <!-- Main Stuff -->
+<!-- 
+    <element class="BG">
+        <div class="gradient"></div>
+        <div class="grid"></div>
+        <div class="FinalBackground"></div>
+    </element>
+
+    <body> 
+    <element class="Title">
+        <div class="Title-Logo"></div>
+        <h1 class="TransparentText_">Also known as Alternate_Individual</h1>
+        <h2 class="Header">[ABOUT ME]</h2>
+        <h1 class="Text_">My name is Alternate, I make games, art, and sometimes music in my free time, 
+            my interests is mainly coding and drawing or playing games such as roblox or lethal company,
+            I'm a big fan of procedural generation, specifically dungon generations</h1>
+    </element>
+    </body>
+
+    <body>
+        <div class="CustomLine"></div>
+        <div class="container" style="padding: 10px;">
+            <aside class="Left">
+                <h2 class="Header">[BLOG]</h2>
+                <div class="Scroll_">
+                    <h1 class="BlogText_">12.7.24/Alternate: This web is quite awesome, am I right, or am I right?</h1>
+                </div>
+            </aside>
+            <aside class="Right">
+                 <h3 class="Header">[MAIN MEDIA LINKS]</h2>
+                <section class="IconsButton" style="text-align: center;padding: 10px;">
+                    <a class="ButtonIcon" href="https://www.roblox.com/users/1384870146/profile"><img class="Icon" src="Assets/Media/RobloxIcon.png" title="..."></a>
+                    <a class="ButtonIcon" href="https://www.youtube.com/@Alternate_Individual"><img class="Icon" src="Assets/Media/YouTubeIcon.png" title="..."></a>
+                </section>
+                <h3 class="Header">Check these out!</h2> 
+                <h1 class="Text_">TEXT GOES HERE</h1>
+                <section class="MainButton" style="text-align: center;padding: 10px;">
+                    <a class="ButtonIcon" href="https://alt.wayland.best/"><img class="t88x31" src="Assets/Media/Alternate.gif" title="My button!"></a>
+                    <a class="ButtonIcon" href="https://icosahedr.online/"><img class="t88x31" src="Assets/Media/sapbutton.gif" title="..."></a>
+                    <a class="ButtonIcon" href="https://ryzzica.xyz/#"><img class="t88x31" src="Assets/Media/jecket.gif" title="feeling ryzzy"></a>
+                    <a class="ButtonIcon" href="https://mayf.pink/"><img class="t88x31" src="Assets/Media/mayf.gif" title="..."></a>
+                    <a class="ButtonIcon" href="https://theabsoluterealm.com/"><img class="t88x31" src="Assets/Media/absolute-realm.gif" title="the"></a>
+                </section>
+            </aside>
+        </div>
+        <div class="CustomLine"></div>
+
+        GALLERY
+        <h2 class="Header">[GALLERY]</h2>
+        
+        <div class="GalleryScroll_">
+            <img class="GalleryImage" src="Assets/Gallery/Angle.png" title="silly">
+            <img class="GalleryImage" src="Assets/Gallery/Ascenders.png" title="silly">
+            <img class="GalleryImage" src="Assets/Gallery/Alternate.png" title="silly">
+            <img class="GalleryImage" src="Assets/Gallery/PeaceandTranquility.png" title="silly">
+            <h2 class="Header">Nothing To See Here...</h2>
+        </div>
+
+        <div class="CustomLine"></div>
+
+
+        <div class="Center" style="text-align: center;">
+            <h2 class="Header">[GAMES I'VE WORKED ON]</h2>
+            <section class="MainButton" style="display: flex; justify-content: center; gap: 20px; padding: 10px; flex-wrap: wrap;">
+                
+
+                <li class="project">
+                    <a href="https://www.roblox.com/games/14536336419/test-town">
+                        <img class="GameBackground" src="Assets/GameBackgrounds/TestTown.png" title="silly" style="max-width: 100%;">
+                    </a>
+                    <a class="ProjectLink" href="https://www.roblox.com/games/14536336419/test-town">
+                        <h2 class="ProjectName">TEST TOWN</h2>
+                    </a>
+                    <h3 class="ProjectDescription">No Description atm</h3>
+                </li>
+
+                <li class="project">
+                    <a href="https://www.roblox.com/games/17553090685/Untitled-Game">
+                        <img class="GameBackground" src="Assets/GameBackgrounds/MazePurg.png" title="silly" style="max-width: 100%;">
+                    </a>
+                    <a class="ProjectLink" href="https://www.roblox.com/games/17553090685/Untitled-Game">
+                        <h2 class="ProjectName">MAZE PURGATORY</h2>
+                    </a>
+                    <h3 class="ProjectDescription">No Description atm</h3>
+                </li>
+
+                <li class="project">
+                    <a href="https://www.roblox.com/games/7249664784/ANIMA-AULA">
+                        <img class="GameBackground" src="Assets/GameBackgrounds/AA.png" title="silly" style="max-width: 100%;">
+                    </a>
+                    <a class="ProjectLink" href="https://www.roblox.com/games/7249664784/ANIMA-AULA">
+                        <h2 class="ProjectName">ANIMA-AULA</h2>
+                    </a>
+                    <h3 class="ProjectDescription">No Description atm</h3>
+                </li>
+
+                <li class="project">
+                        <img class="GameBackground" src="Assets/GameBackgrounds/Splashdown.png" title="silly" style="max-width: 100%;">
+                        <h2 class="ProjectName">SPLASHDOWN [UNRLEASED]</h2>
+                    <h3 class="ProjectDescription">No Description atm</h3>
+                </li>
+
+            </section>
+        </div>
+
+        <div class="CustomLine"></div>
+
+        <div class="Center">
+            <h2 class="Header">[SITE LINKS]</h2>
+            <h2 class="Header">guh</h2>
+        </div>
+        
+        <div class="CustomLine"></div>
+        <h1 class="RainbowText_">[THIS IS NOT THE FINAL VERSION OF THE WEB, SOMETHINGS MIGHT CHANGE OVERTIME]</h1>
+    </body> -->
