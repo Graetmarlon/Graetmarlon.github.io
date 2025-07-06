@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" style="--text-align: justify;
-    --primary: #ffa640;
+    --primary: #40ff89;
     --BackgroundColor: #0a0a0a;
     --yellow: #ffffff;
-    --orange: #f68a2b;
-    --SlightlyOrange: #b66a2873;
+    --cyan: #6effb6;
+    --red: #ff333307;
+    --SlightlyOrange: #2db62873;
     --window-color: black;">
 
 <head>
@@ -13,7 +14,7 @@
   <title>Alternate</title>
 
   <!-- Favicon -->
-  <!-- <link rel="shortcut icon" href="PlaceholderTexture.ico" /> -->
+  <link rel="shortcut icon" href="Placeholder.ico" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="Css.css" />
@@ -45,7 +46,7 @@
 
 
     div.Main-container {
-        width: 60%;
+        width: 80%;
         height: 100%;
         margin: auto;
         background-color: var(--BackgroundColor);
@@ -58,10 +59,13 @@
     }
     p {
         color: var(--primary);
-        size: 10px;
-
-        margin-block-start: 1em;
-        margin-block-end: 1em;
+        /* margin: 0; */
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.4;
     }
     .Section {
         position: relative;
@@ -70,39 +74,53 @@
         border: 2px solid var(--primary);
         margin: 1.5rem 0px;
         height: 51vh;
+        overflow: auto;
+        box-sizing: border-box;
     }
     .Section-Title {
-        display: inline;
-        position: absolute;
-        top: 3px;
-        line-height: 1;
         margin: -0.5rem 0px 0px;
-
+        
         background: var(--BackgroundColor);
         color: var(--primary);
-        overflow: hidden;
-        white-space: nowrap;
     }
     .container {
         display: flex;
         flex-direction: row;
         column-gap: 16px;
     }
+
     .Scroll_ {
         width: 100%;
-        overflow-y: scroll;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        overflow-y: auto;
         scrollbar-width: thin;
+        padding: 10px;
     }
-    .Image {
-        border: 2px solid var(--primary);
-        padding: 2%;
-        width: 44%;
-        height: 44%;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+
+    .ImageContainer {
+        width: 250px;
+        height: 150px;
         user-select: none;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--BackgroundColor);
     }
+
+    .Image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
     aside.Left {
         flex: 1;
     }
@@ -111,7 +129,7 @@
     }
 
     summary.Sum{
-        color: var(--orange);
+        color: var(--cyan);
         user-select: none;
     }
     li {
@@ -119,8 +137,12 @@
     }
 
     .Color {
-        color: var(--orange);
+        color: var(--cyan);
     }
+    .Anomaly {
+        color: var(--red);
+    }
+
     .Color1 {
         color: var(--SlightlyOrange);
     }
@@ -140,324 +162,159 @@
 <body>
     <div class="BG"></div>
     <div class="Main-container">
+        <p><span class="Color1">Warning: This website isn't really compatable for mobile :[</span></p>
+
         <p>> Hi! I'm <span class="Color">Alternate_Individual</span><span class="Color1"> (Or known as Alternate or Alt.)</span></p>
-        <p>I make games, art, and sometimes music in my free time.</p>
-        <p>My interests include coding, drawing, and playing games such as Roblox or Lethal Company. I'm a big fan of procedural generation, specifically dungeon generation.</p>
-        <p>Hope you enjoy looking through my website!</p>
+        <p><span class="Color">Things that I do: </span> Scripting (LuaU or Lua, Frag, Html, Css), Modeling, Drawing, Graphic Design, <span class="Color1">Rarely make music</span></p>
+
+        <p><span class="Color">My interests include:</span> games (Lethal Company, Roblox, R.E.P.O, Yume 2kki, Astroflux), music, procedural generation</p>
+        <p><span class="Color1">I'm not a big talker...</span></p>
+        <!-- <p>My interests include coding, drawing, and playing games such as Roblox or Lethal Company. I'm a big fan of procedural generation, specifically dungeon generation.</p>
+        <p>Hope you enjoy looking through my website!</p> -->
 
         <div class="container" style="padding: 10px;">
             <aside class="Right">
                 <div class="Section">
-                    <h2 class="Section-Title">[GALLERY]</h2>
-                    <p>This is where I post most of my art.</p>
+                    <h2 class="Section-Title">[RANDOM MEDIA :D]</h2>
+                    <p>This is where I post random stuff that I make.</p>
                     <div class="Scroll_" style="max-height: 45vh;">
-                        <img class="Image" src="Assets/Gallery/GUMBALLER.png" title="Gum" data-id="GuballerFanart">
-                        <img class="Image" src="Assets/Gallery/Angle.png" title="Friends" data-id="Angle">
-                        <img class="Image" src="Assets/Gallery/Ascenders.png" title="Friends" data-id="DeveloperArt">
-                        <img class="Image" src="Assets/Gallery/Alternate.png" title="Alternate" data-id="Alternate">
-                        <img class="Image" src="Assets/Gallery/PeaceandTranquility.png" title="Anukriti" data-id="Anukriti">
-                        <img class="Image" src="Assets/Gallery/CoolKidArt-Alt.png" title="CoolKid" data-id="CookkidArt">
-                        <img class="Image" src="Assets/Gallery/Alternate1.png" title="AlternateAlt" data-id="Alternate_1">
-                        <img class="Image" src="Assets/Gallery/Alternate2.png" title="AlternateAlt1" data-id="Alternate_2">
-                        <img class="Image" src="Assets/Gallery/Lethal.png" title="Lethal_Company" data-id="Lethal_CompanyArt">
-                        <img class="Image" src="Assets/Gallery/ElementAndGumballer.png" title="Gumballer W Element" data-id="ElementFanart">
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/GUMBALLER.png" title="Gum" data-id="GuballerFanart">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/Angle.png" title="Friends" data-id="Angle">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/Ascenders.png" title="Friends" data-id="DeveloperArt">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/Alternate.png" title="Alternate" data-id="Alternate">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/PeaceandTranquility.png" title="Anukriti" data-id="Anukriti">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/CoolKidArt-Alt.png" title="CoolKid" data-id="CookkidArt">
+                        </div>   
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/Alternate1.png" title="AlternateAlt" data-id="Alternate_1">
+                        </div>   
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/Alternate2.png" title="AlternateAlt1" data-id="Alternate_2">
+                        </div>   
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Gallery/Lethal.png" title="Lethal_Company" data-id="Lethal_CompanyArt">
+                        </div>   
+                        <div class="ImageContainer">
+                             <img class="Image" src="Assets/Gallery/ElementAndGumballer.png" title="Gumballer W Element" data-id="ElementFanart">                       
+                        </div>  
+
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/NullifierArt.png" title="Null" data-id="Null">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/Sourling.png" title="nil" data-id="Sourling">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/Parasite.png" title="nil" data-id="Parasite">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/Poision.png" title="nil" data-id="Poision">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/Radio.png" title="nil" data-id="Radio">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/Items.png" title="nil" data-id="Items">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/Smiler.png" title="nil" data-id="Smiler">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/MapScreenshot.png" title="nil" data-id="Map">
+                        </div>
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/DILobbyScreenshot.png" title="nil" data-id="Lobby">
+                        </div>
                     </div>
                 </div>
                 <div class="Section">
                     <h2 class="Section-Title">[GAMES]</h2>
                     <p>These are the games I've made or collaberated on.</p>
                     <div class="Scroll_" style="max-height: 45vh;">
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/77697185195450/Derivation-Infestation" target="_blank">
-                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-2f0abd59aa69fd1168ea2f647c8b8a9f/768/432/Image/Webp/noFilter" title="Derivation Infestation" data-id="game1" style="max-width: 48%;">
+                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-2f0abd59aa69fd1168ea2f647c8b8a9f/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Derivation Infestation" data-id="game1" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/14536336419/test-town" target="_blank">
-                            <img class="Image" src="Assets/GameBackgrounds/TestTown.png" title="Test Town" data-id="game2" style="max-width: 48%;">
+                            <img class="Image" src="Assets/GameBackgrounds/TestTown.png" style="width: 100%; height: 100%;" title="Test Town" data-id="game2" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/18640529329/Metro" target="_blank">
-                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-d0aceede005364c31a1392ba4ba569d4/768/432/Image/Webp/noFilter" title="Metro" data-id="game3" style="max-width: 48%;">
+                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-d0aceede005364c31a1392ba4ba569d4/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Metro" data-id="game3" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/17553090685/Untitled-Game" target="_blank">
-                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-7f4881320294feac1f1672abb8bd5689/768/432/Image/Webp/noFilter" title="MAZE PURGATORY" data-id="game4" style="max-width: 48%;">
+                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-7f4881320294feac1f1672abb8bd5689/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="MAZE PURGATORY" data-id="game4" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/122692017027748/Everything-All-At-Once" target="_blank">
-                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-1a1f7e7b71ee4284ee8e6db6371a73f3/768/432/Image/Webp/noFilter" title="Everything All At Once" data-id="game5" style="max-width: 48%;">
+                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-1a1f7e7b71ee4284ee8e6db6371a73f3/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Everything All At Once" data-id="game5" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/7249664784/ANIMA-AULA" target="_blank">
-                            <img class="Image" src="Assets/GameBackgrounds/AA.png" title="ANIMA AULA" data-id="game6" style="max-width: 48%;">
+                            <img class="Image" src="Assets/GameBackgrounds/AA.png" style="width: 100%; height: 100%;" title="ANIMA AULA" data-id="game6" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/13620547054/Splashdown" target="_blank">
-                            <img class="Image" src="Assets/GameBackgrounds/Splashdown.png" title="Splashdown" data-id="game7" style="max-width: 48%;">
+                            <img class="Image" src="Assets/GameBackgrounds/Splashdown.png" style="width: 100%; height: 100%;" title="Splashdown" data-id="game7" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/13179256798/Addition-Abstraction" target="_blank">
-                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-f5638f770ced6bbdea61ceb6ed5e01e4/768/432/Image/Webp/noFilter" title="Addition Abstraction" data-id="game8" style="max-width: 48%;">
+                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-f5638f770ced6bbdea61ceb6ed5e01e4/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Addition Abstraction" data-id="game8" style="max-width: 48%;">
                         </a>
+                        </div>
+                        <div class="ImageContainer">
                         <a href="https://www.roblox.com/games/7836133734/CAMPAIGN-Minus-Elevation" target="_blank">
-                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-4516221100f9aabfcea2e040d0efe0da/768/432/Image/Webp/noFilter" title="Minus Elevation" data-id="game9" style="max-width: 48%;">
+                            <img class="Image" src="https://tr.rbxcdn.com/180DAY-4516221100f9aabfcea2e040d0efe0da/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Minus Elevation" data-id="game9" style="max-width: 48%;">
                         </a>
+                        </div>
                     </div>
                 </div>
             </aside>
             <aside class="Left">
                 <div class="Section">
-                    <h2 class="Section-Title">[FAVORITES]</h2>
-                    <p><span class="Color">Games: </span> I like playing Delver like games such as Minus Decendance or Addition Abstraction. (On Roblox)</p>
-                    <p>Theres also other games like Lethal Company or R.E.P.O</p>
-                    <p><span class="Color">Other games I play when I'm bored:</span> Midnight Horrors, Project Somnia, Minus Elevation, Eternal Towers Of Hell, bLockerman's Minesweeper, Something Evil Will Happen.</p>
-                    <p><span class="Color">Coding / Developing: </span> I am a workaholic when It comes to developing things that I like.</p>
-                    <p><span class="Color">Digital Art: </span>I like drawing when I have the chance to.</p>
+                    <h2 class="Section-Title">[COMMISSIONS]</h2>
+                    <p><span class="Color">Drawing (OC): </span>$15 USD (Average) </p>
+                    <p><span class="Color">Coding (Roblox Studio): </span>$20 USD (Average) </p>
+                    <p><span class="Color">Modeling (Blender/Roblox Studio): </span>$35 USD (Average) </p>
+
+                    <h2 class="Section-Title">[COMMISSION INFO]</h2>
+                    <p><span class="Color">Prices can adjusted if the commission is complex.</span></p>
+                    <p><span class="Color">WEIRD, ILLIGAL, OR BAD STUFF IS FORBIDEN! >:[</span></p>
                 </div>
 
                 <div class="Section">
-                    <h2 class="Section-Title">[D.I TEASERS]</h2>
-                    <p>This is where you can find recent teasers for Derivation-Infestation</p>
-
-                    <div class="Scroll_" style="max-height: 41vh;">
-                        <details close=""> <!-- APRIL 2025 -->
-                            <summary class="Sum">[APRIL 2025]</summary>
-                            <ul>
-                                <li>4/8/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image46.png">
-                                    </ul>
-                                </li>
-                                <li>4/9/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image47.png">
-                                    </ul>
-                                </li>
-                                <li>4/22/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image48.png">
-                                    </ul>
-                                </li>
-                            </ul>
-                        </details>
-
-                        <details close=""> <!-- MARCH 2025 -->
-                            <summary class="Sum">[MARCH 2025]</summary>
-                            <ul>
-                                <li>3/2/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image45.png">
-                                    </ul>
-                                </li>
-                            </ul>
-                        </details>
-
-                        <details close=""> <!-- FEBUARY 2025 -->
-                            <summary class="Sum">[FEBUARY 2025]</summary>
-                            <ul>
-                                <li>2/1/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image32.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image33.png">
-                                    </ul>
-                                </li>
-                                <li>2/2/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image34.png">
-                                    </ul>
-                                </li>
-                                <li>2/3/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image35.png">
-                                    </ul>
-                                </li>
-                                <li>2/4/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image36.png">
-                                    </ul>
-                                </li>
-                                <li>2/5/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image37.png">
-                                    </ul>
-                                </li>
-                                <li>2/6/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image38.png">
-                                    </ul>
-                                </li>
-                                <li>2/7/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image39.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image40.png">
-                                    </ul>
-                                </li>
-                                <li>2/8/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image41.png">
-                                    </ul>
-                                </li>
-                                <li>2/14/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image42.png">
-                                    </ul>
-                                </li>
-                                <li>2/18/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image43.png">
-                                    </ul>
-                                </li>
-                                <li>2/28/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image44.png">
-                                    </ul>
-                                </li>
-                            </ul>
-                        </details>
-
-                        <details close=""> <!-- JANUARY 2025 -->
-                            <summary class="Sum">[JANUARY 2025]</summary>
-                            <ul>
-                                <li>1/1/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image13.png">
-                                    </ul>
-                                </li>
-                                <li>1/5/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image14.png">
-                                    </ul>
-                                </li>
-                                <li>1/8/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image15.png">
-                                    </ul>
-                                </li>
-                                <li>1/10/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image16.png">
-                                    </ul>
-                                </li>
-                                <li>1/11/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image17.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image18.png">
-                                    </ul>
-                                </li>
-                                <li>1/22/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image19.png">
-                                    </ul>
-                                </li>
-                                <li>1/23/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image20.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image21.png">
-                                    </ul>
-                                </li>
-                                <li>1/24/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image22.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image23.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image24.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image25.png">
-                                    </ul>
-                                </li>
-                                <li>1/25/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image26.png">
-                                    </ul>
-                                </li>
-                                <li>1/26/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image27.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image28.png">
-                                    </ul>
-                                </li>
-                                <li>1/27/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image29.png">
-                                    </ul>
-                                </li>
-                                <li>1/28/25
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image30.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image31.png">
-                                    </ul>
-                                </li>
-                            </ul>
-                        </details>
-
-                        <details close=""> <!-- DECEMBER 2024 -->
-                            <summary class="Sum">[DECEMBER 2024]</summary>
-                            <ul>
-                                <li>12/24/24
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image6.png">
-                                    </ul>
-                                </li>
-                                <li>12/25/24
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image7.png">
-                                    </ul>
-                                </li>
-                                <li>12/26/24
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image8.png">
-                                       <img class="Image" src="Assets/GameUpdates/Image9.png">
-                                    </ul>
-                                </li>
-                                <li>12/29/24
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image10.png">
-                                    </ul>
-                                </li>
-                                <li>12/30/24
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image11.png">
-                                    </ul>
-                                </li>
-                                <li>12/31/24
-                                    <ul>
-                                       <img class="Image" src="Assets/GameUpdates/Image12.png">
-                                    </ul>
-                                </li>
-                            </ul>
-                        </details>
-
-                        <details close=""> <!-- NOVEMBER 2024 -->
-                          <summary class="Sum">[NOVEMBER 2024]</summary>
-                          <ul>
-                            <li>11/4/24
-                                <ul>
-                                   <img class="Image" src="Assets/GameUpdates/Image1.png">
-                                </ul>
-                            </li>
-                            <li>11/5/24
-                              <ul>
-                                <!-- <li>New Generation in the works (Modified Maze Gen made by - Supert)</li> -->
-                                 <img class="Image" src="Assets/GameUpdates/Image2.png">
-                                 <img class="Image" src="Assets/GameUpdates/Image3png.png">
-                              </ul>
-                            </li>
-                            <li>11/6/24
-                                <ul>
-                                   <img class="Image" src="Assets/GameUpdates/Image4.png">
-                                </ul>
-                            </li>
-                            <li>11/7/24
-                                <ul>
-                                   <img class="Image" src="Assets/GameUpdates/Image5.png">
-                                </ul>
-                            </li>
-                          </ul>
-                        </details>
-                    </div>
+                    <h2 class="Section-Title">[not so empty...]</h2>
+                    
+                    <a href="https://www.roblox.com/games/17021647215/unnamed" target="_blank">
+                        <p>
+                            <span class="Anomaly">.- -.-. .... .. . ...- . -- . -. -</span>
+                        </p>
+                    </a>
+                    
+                    <p><span class="Anomaly">Seems, like im not the only one here. Hello user and welcome, feel free to look around, if you're looking for secrets, theres not really any here, BUT they can be found in the game list, good luck.</span></p>
+                    <p><span class="Anomaly">PS. I'll be waiting</span></p>
                 </div>
             </aside>
-            <!-- <aside class="Left">
-                <div class="Section">
-                    <h2 class="Section-Title">[D.I CREDITS]</h2>
-                    <p><span class="Color">@SuperTrain123456</span> (D.I Developer)</p>
-                    <p><span class="Color">@S^RA</span> (D.I Developer)</p>
-                    <p><span class="Color">@MusicalDomination</span> (D.I Contributer)</p>
-                    <p><span class="Color">@Slooshed</span> (D.I Contributer)</p>
-                    <p><span class="Color">@Spaghetti_InSpace </span>(D.I Contributer)</p>
-                    <p><span class="Color">@MrSansinator</span> (D.I Contributer)</p>
-                </div>
-            </aside> -->
         </div>
     </div>
 </body>
