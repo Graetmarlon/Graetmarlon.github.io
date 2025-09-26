@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" style="--text-align: justify;
-    --primary: #40ff89;
-    --BackgroundColor: #0a0a0a;
-    --yellow: #ffffff;
-    --cyan: #6effb6;
+    --primary: #dfaaaa;
+    --BackgroundColor: #000000e3;
+    --yellow: #000000;
+    --cyan: #ffc1c1;
     --red: #ff333307;
-    --SlightlyOrange: #2db62873;
+    --SlightlyOrange: #aa575773;
     --window-color: black;">
 
 <head>
@@ -35,18 +35,20 @@
         top: 0px;
         left: 0px;
         width: 100%;
-        height: 150%;
+        height: 100%;
 
         perspective: 2000px;
         perspective-origin: 50% 50%;
-        background-color: var(--BackgroundColor);
+        background-image: url('Assets/Texture.png');
+        background-size: 150px 150px;
+
         transform-style: preserve-3d;
         overflow: hidden;
     }
 
 
     div.Main-container {
-        width: 80%;
+        width: 90%;
         height: 100%;
         margin: auto;
         background-color: var(--BackgroundColor);
@@ -72,9 +74,9 @@
         background-color: inherit;
         padding: 1rem;
         border: 2px solid var(--primary);
-        margin: 1.5rem 0px;
-        height: 51vh;
-        overflow: auto;
+        /* margin: 1.5rem 0px; */
+        height: 60vh;
+        /* overflow: auto; */
         box-sizing: border-box;
     }
     .Section-Title {
@@ -90,7 +92,7 @@
     }
 
     .Scroll_ {
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -100,7 +102,7 @@
     }
 
     .ImageContainer {
-        width: 250px;
+        width: 150px;
         height: 150px;
         user-select: none;
         overflow: hidden;
@@ -110,6 +112,17 @@
         justify-content: center;
         background-color: var(--BackgroundColor);
     }
+    .GameImageContainer {
+            width: 175px;
+            height: 100px;
+            user-select: none;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--BackgroundColor);
+    }
 
     .Image {
         background-position: center;
@@ -117,6 +130,16 @@
         background-size: contain;
         max-width: 100%;
         max-height: 100%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .ImageBlock {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        max-width: 550px;
+        max-height: 700px;
         width: auto;
         height: auto;
     }
@@ -125,7 +148,7 @@
         flex: 1;
     }
     aside.Right {
-        flex: 2;
+        flex: 1.2;
     }
 
     summary.Sum{
@@ -165,10 +188,10 @@
         <p><span class="Color1">Warning: This website isn't really compatable for mobile :[</span></p>
 
         <p>> Hi! I'm <span class="Color">Alternate_Individual</span><span class="Color1"> (Or known as Alternate or Alt.)</span></p>
-        <p><span class="Color">Things that I do: </span> Scripting (LuaU or Lua, Frag, Html, Css), Modeling, Drawing, Graphic Design, <span class="Color1">Rarely make music</span></p>
+        <p><span class="Color">Things that I do: </span> Scripting (LuaU or Lua, Frag, Html, Css), Modeling, Drawing or Graphic Design, <span class="Color1">Rarely make music from time to time.</span></p>
 
-        <p><span class="Color">My interests include:</span> games (Lethal Company, Roblox, R.E.P.O, Yume 2kki, Astroflux), music, procedural generation</p>
-        <p><span class="Color1">I'm not a big talker...</span></p>
+        <p><span class="Color">My interests include games like:</span> Lethal Company, Roblox, R.E.P.O, Yume 2kki, Astroflux, sometimes music and procedural generation</p>
+        <p><span class="Color1">To lazy to add more stuff, check out stuff that I made bellow!</span></p>
         <!-- <p>My interests include coding, drawing, and playing games such as Roblox or Lethal Company. I'm a big fan of procedural generation, specifically dungeon generation.</p>
         <p>Hope you enjoy looking through my website!</p> -->
 
@@ -178,37 +201,49 @@
                     <h2 class="Section-Title">[RANDOM MEDIA :D]</h2>
                     <p>This is where I post random stuff that I make.</p>
                     <div class="Scroll_" style="max-height: 45vh;">
+                        <div class="ImageBlock">
+                            <div class="ImageContainer">
+                                <img class="Image" src="Assets/Gallery/AlternateAlternate.png" title="Alt" data-id="AlternateAlternate">
+                            </div>
+                        </div>
+
+                        <div class="ImageBlock">
+                            <div class="ImageContainer">
+                                <img class="Image" src="Assets/Gallery/GUMBALLER.png" title="Gum" data-id="GuballerFanart">
+                            </div>
+                        </div>
+
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/GUMBALLER.png" title="Gum" data-id="GuballerFanart">
+                            <img class="Image" src="Assets/Gallery/Angle.png" title="Weird and strict..." data-id="Ang">
                         </div>
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/Angle.png" title="Friends" data-id="Angle">
+                            <img class="Image" src="Assets/Gallery/Ascenders.png" title="Friends!!" data-id="DevArt">
                         </div>
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/Ascenders.png" title="Friends" data-id="DeveloperArt">
-                        </div>
-                        <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/Alternate.png" title="Alternate" data-id="Alternate">
+                            <img class="Image" src="Assets/Gallery/Alternate.png" title="OriginalAlternate" data-id="OriginalAlternate">
                         </div>
                         <div class="ImageContainer">
                             <img class="Image" src="Assets/Gallery/PeaceandTranquility.png" title="Anukriti" data-id="Anukriti">
                         </div>
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/CoolKidArt-Alt.png" title="CoolKid" data-id="CookkidArt">
+                            <img class="Image" src="Assets/Gallery/CoolKidArt-Alt.png" title="CoolKid" data-id="CookkidFanart">
                         </div>   
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/Alternate1.png" title="AlternateAlt" data-id="Alternate_1">
+                            <img class="Image" src="Assets/Gallery/Alternate1.png" title="Alt as alt" data-id="huhhuh">
                         </div>   
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/Alternate2.png" title="AlternateAlt1" data-id="Alternate_2">
+                            <img class="Image" src="Assets/Gallery/Alternate2.png" title="Alt again?" data-id="huhhuhhuh">
                         </div>   
                         <div class="ImageContainer">
-                            <img class="Image" src="Assets/Gallery/Lethal.png" title="Lethal_Company" data-id="Lethal_CompanyArt">
+                            <img class="Image" src="Assets/Gallery/Lethal.png" title="Lethal_Company" data-id="Lethal_CompanyFanart">
                         </div>   
                         <div class="ImageContainer">
-                             <img class="Image" src="Assets/Gallery/ElementAndGumballer.png" title="Gumballer W Element" data-id="ElementFanart">                       
+                             <img class="Image" src="Assets/Gallery/ElementAndGumballer.png" title="Gumballer with Element" data-id="ElementAndGumballerFanart">                       
                         </div>  
 
+                        <div class="ImageContainer">
+                            <img class="Image" src="Assets/Refernces/PartywaresMessage.png" title="Null" data-id="Null">
+                        </div>
                         <div class="ImageContainer">
                             <img class="Image" src="Assets/Refernces/NullifierArt.png" title="Null" data-id="Null">
                         </div>
@@ -238,60 +273,62 @@
                         </div>
                     </div>
                 </div>
+            </aside>
+
+            <aside class="Left">
                 <div class="Section">
                     <h2 class="Section-Title">[GAMES]</h2>
                     <p>These are the games I've made or collaberated on.</p>
                     <div class="Scroll_" style="max-height: 45vh;">
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/77697185195450/Derivation-Infestation" target="_blank">
                             <img class="Image" src="https://tr.rbxcdn.com/180DAY-2f0abd59aa69fd1168ea2f647c8b8a9f/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Derivation Infestation" data-id="game1" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/14536336419/test-town" target="_blank">
                             <img class="Image" src="Assets/GameBackgrounds/TestTown.png" style="width: 100%; height: 100%;" title="Test Town" data-id="game2" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/18640529329/Metro" target="_blank">
                             <img class="Image" src="https://tr.rbxcdn.com/180DAY-d0aceede005364c31a1392ba4ba569d4/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Metro" data-id="game3" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/17553090685/Untitled-Game" target="_blank">
                             <img class="Image" src="https://tr.rbxcdn.com/180DAY-7f4881320294feac1f1672abb8bd5689/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="MAZE PURGATORY" data-id="game4" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/122692017027748/Everything-All-At-Once" target="_blank">
                             <img class="Image" src="https://tr.rbxcdn.com/180DAY-1a1f7e7b71ee4284ee8e6db6371a73f3/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Everything All At Once" data-id="game5" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/7249664784/ANIMA-AULA" target="_blank">
                             <img class="Image" src="Assets/GameBackgrounds/AA.png" style="width: 100%; height: 100%;" title="ANIMA AULA" data-id="game6" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/13620547054/Splashdown" target="_blank">
                             <img class="Image" src="Assets/GameBackgrounds/Splashdown.png" style="width: 100%; height: 100%;" title="Splashdown" data-id="game7" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/13179256798/Addition-Abstraction" target="_blank">
                             <img class="Image" src="https://tr.rbxcdn.com/180DAY-f5638f770ced6bbdea61ceb6ed5e01e4/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Addition Abstraction" data-id="game8" style="max-width: 48%;">
                         </a>
                         </div>
-                        <div class="ImageContainer">
+                        <div class="GameImageContainer">
                         <a href="https://www.roblox.com/games/7836133734/CAMPAIGN-Minus-Elevation" target="_blank">
                             <img class="Image" src="https://tr.rbxcdn.com/180DAY-4516221100f9aabfcea2e040d0efe0da/768/432/Image/Webp/noFilter" style="width: 100%; height: 100%;" title="Minus Elevation" data-id="game9" style="max-width: 48%;">
                         </a>
                         </div>
                     </div>
                 </div>
-            </aside>
-            <aside class="Left">
-                <div class="Section">
+
+                <!-- <div class="Section">
                     <h2 class="Section-Title">[COMMISSIONS]</h2>
                     <p><span class="Color">Drawing (OC): </span>$15 USD (Average) </p>
                     <p><span class="Color">Coding (Roblox Studio): </span>$20 USD (Average) </p>
@@ -313,7 +350,7 @@
                     
                     <p><span class="Anomaly">Seems, like im not the only one here. Hello user and welcome, feel free to look around, if you're looking for secrets, theres not really any here, BUT they can be found in the game list, good luck.</span></p>
                     <p><span class="Anomaly">PS. I'll be waiting</span></p>
-                </div>
+                </div> -->
             </aside>
         </div>
     </div>
