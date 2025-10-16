@@ -163,12 +163,6 @@ span {
     border: 1px solid #3a2424;
     padding: 6px 10px;
 }
-/* .BackgroundDetail0 {
-    z-index: -1;
-    position: fixed;
-    opacity: 0.05;
-    animation: Infrotate 5s linear infinite;
-} */
 
 .BG {
   position: fixed;
@@ -184,4 +178,12 @@ span {
   animation: scrollY 0.25s linear infinite;
 
   z-index: -10;
+}
+
+/*remove bulletpoints when the script is ran*/
+#ImageView {
+  list-style: none;
+}
+#GameImageView {
+  list-style: none;
 }

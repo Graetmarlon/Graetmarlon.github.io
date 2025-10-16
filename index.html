@@ -11,13 +11,72 @@
 <head></head>
 
 <main>
+    <div id="ImageViewer" style="
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%; 
+        height: 100%;
+        opacity: 1%;
+        background: linear-gradient(rgba(11, 5, 5, 0.844), #26110b);
+    ">
+    <div id="ImageViewerAnimatible" style="
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        top: 0%;
+        left: 0%;
+        width: 100%; 
+        height: 100%;
+    ">
+            <p style="
+            font-weight: 700; 
+            font-size: 40px;
+            text-align: center;
+
+            color: #c9845c;
+            border: 1px solid #5f382c;
+            background-color: #27151088;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 6px 16px;
+            border-radius: 10px;
+            " id="LoadedImageName">ALTERNATE ALTERNATE</p>
+
+            <div id="LoadedImage" style="
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                ">
+            </div>
+
+            <p style="
+            font-weight: 500; 
+            font-size: 20px;
+            text-align: center;
+
+            color: #c9845c;
+            border: 1px solid #5f382c;
+            background-color: #27151088;
+            margin-top: 10px;
+            padding: 6px 16px;
+            border-radius: 10px;
+            " id="LoadedImageDesc">ALTERNATE ALTERNATE</p>
+
+        </div>
+    </div>
+
     <!-- <img src="FaceBoom.png" class="BG"> -->
     <div class="BG"></div>
     <div id="MainCon">
         <header id="topbar">
             <div class="row">
                 <h1>ALTERNATE</h1>
-                <img src="Media/rect.png" class="logo">
+                <img src="Pumkin.png" class="logo">
             </div>
         </header>
         <p class="Sub">Welcome to my wip website!</p>
@@ -123,29 +182,11 @@
     </div>
     
     <div class="MainCon">
-        <section>
+        <section id="ImageView">
             <h2>- ART IMAGES</h2>
-            <img src="Media/Art/Alternate1.png" class="Media">
-            <img src="Media/Art/Alternate2.png" class="Media">
-            <img src="Media/Art/Angle.png" class="Media">
-            <img src="Media/Art/Ascenders.png" class="Media">
-            <img src="Media/Art/CoolKidArt-Alt.png" class="Media">
-            <img src="Media/Art/ElementAndGumballer.png" class="Media">
-            <img src="Media/Art/GUMBALLER.png" class="Media">
-            <img src="Media/Art/Lethal.png" class="Media">
-            <img src="Media/Art/PeaceandTranquility.png" class="Media">
-            <img src="Media/Art/AlternateAlternate.png" class="Media">
-            <img src="Media/Art/NullifierArt.png" class="Media">
-            <img src="Media/Art/Parasite.png" class="Media">
-            <img src="Media/Art/Poision.png" class="Media">
-            <img src="Media/Art/Sourling.png" class="Media">
+        </section>
+        <section id="GameImageView">
             <h2>- GAME IMAGES</h2>
-            <img src="Media/OtherMedia/DIMap.png" class="Media">
-            <img src="Media/OtherMedia/Smiler.png" class="Media">
-            <img src="Media/OtherMedia/DILobbyScreenshot.png" class="Media">
-            <img src="Media/OtherMedia/Items.png" class="Media">
-            <img src="Media/OtherMedia/MapScreenshot.png" class="Media">
-            <img src="Media/OtherMedia/Radio.png" class="Media">
         </section>
     </div>
 </main>
@@ -161,3 +202,4 @@
     el.style.animationDelay = `${index * 0.05}s`;
     });
 </script>
+<script src="script.js"></script>
