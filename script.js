@@ -6,7 +6,7 @@ const ImgData = {
 
         width: "500px",
         height: "500px",
-        SizeMultiplier: 1.25,
+        SizeMultiplier: 1,
         id : 'ImageView',
     },
     Alternate1 : {
@@ -14,8 +14,8 @@ const ImgData = {
         Description : "NO DESCRIPTION",
         Date: "5/5/5",
 
-        width: "1000px",
-        height: "1000px",
+        width: "70px",
+        height: "70px",
         SizeMultiplier: 0.75,
         id : 'ImageView',
     },
@@ -24,9 +24,9 @@ const ImgData = {
         Description : "NO DESCRIPTION",
         Date: "5/5/5",
 
-        width: "902px",
-        height: "1522px",
-        SizeMultiplier: 0.5,
+        width: "40px",
+        height: "55px",
+        SizeMultiplier: 1,
         id : 'ImageView',
     },
     AlternateAlternate : {
@@ -201,21 +201,6 @@ const ImgData = {
         id : 'GameImageView',
     },
 }
-//let variable 
-for (const fl in ImgData) {
-    const data = ImgData[fl];
-    
-    const flap = document.createElement('li');
-    flap.dataset.file = fl;
-
-    const container = document.getElementById(data.id);
-    
-    if (container) {
-        container.appendChild(flap);
-    }
-}
-
-const Images = document.getElementById('ImageView').children
 
 // for (const f of Images) {
 document.addEventListener("DOMContentLoaded", () => {
@@ -279,20 +264,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // Create and style the <li> element (flap)
             const flap = document.createElement("li");
             flap.dataset.file = fl;
-            flap.classList.add("Media");
+            flap.classList.add("PostContainer");
 
             // Apply visual styling
             Object.assign(flap.style, {
-                borderRadius: "10px",
-                height: "120px",
-                width: "120px",
-                cursor: "pointer",
-                listStyle: "none",
-                display: "inline-block",
-                margin: "6px",
                 backgroundImage: `url("Media/Images/${fl}.png")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center"
+                cursor: "pointer",
             });
 
             // Append to the correct container
@@ -332,8 +309,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const widthVal = parseInt(data.width) * data.SizeMultiplier
                 const heightVal = parseInt(data.height) * data.SizeMultiplier
 
-                loadImage.style.maxWidth = `${widthVal}px`;
-                loadImage.style.maxHeight = `${heightVal}px`;
+                loadImage.style.width = `${widthVal}px`;
+                loadImage.style.height = `${heightVal}px`;
                 loadedImageName.textContent = data.Name;
                 LoadedImageDesc.textContent = data.Description;
                 imageViewer.style.zIndex = '10'; //ZIndex -10 is the BG

@@ -60,6 +60,7 @@ main {
     max-width: 1200px;
     margin: auto;
 }
+
 h1 {
     font-size: 60px;
     margin-top: auto;
@@ -77,6 +78,26 @@ span {
     color: #e0ad91;
     margin-top: auto;
     margin-bottom: auto;
+    font-size: 20px;
+    font-weight: 600;
+}
+.MainCon {
+  max-width: 750px;
+  width: 750px;
+  margin:  0 auto;
+}
+.PostContainer {
+  border-radius: 10px;
+
+  max-width: 550px;
+  max-height: 550px;
+  width: calc(22.222% - 8px);
+  height: 200px;
+  margin: 0 4px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .LinkList {
@@ -99,7 +120,7 @@ span {
     border: 1px solid #5f382c;
     border-radius: 10px;
     gap: 10px;
-    padding: 14px 16px;
+    padding: 16px 20px;
     transition: border-color 0.2s ease, transform 0.05s ease;
     background-color: #27151088;
 
@@ -116,7 +137,6 @@ span {
     background-color: #ac977c27;
 }
 
-
 .Sub {
     color: #8b5836b2;
     text-align: center;
@@ -124,12 +144,14 @@ span {
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
 }
 
 .logo {
-    height: 120px;  
+    height: 150px;  
     margin-top: auto;
     margin-bottom: auto; 
 }
@@ -180,10 +202,31 @@ span {
   z-index: -10;
 }
 
-/*remove bulletpoints when the script is ran*/
-#ImageView {
+#ImageView { /*Taking a small break before heading back to coding*/
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  gap: 10px;
+  margin: 0 4px; 
 }
+
 #GameImageView {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  gap: 10px;
+  margin: 0 4px; 
 }
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 900px;
+  }
+  .row {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
