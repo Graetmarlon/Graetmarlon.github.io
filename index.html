@@ -1,208 +1,78 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="Css.css" />
-<html lang="en">
+<link rel="stylesheet" href="Css.css"/>
+<html lang="en" style="
+    --BackgroundColor: #0f141a;
+    --BoxColor: #1f1f1f7e;
+    --BoxBorderColor: #3d444db3;
+    
+    --BoxHighlightColor: #313136;
+    --BoxBorderHighlightColor: #ffffff;
+
+    --DefaultTextColor: #D9DFED;
+">
+
+<!-- 
+#F95D7F red 
+#F9F45D yellow
+#79F95D green
+#44EBFD light blue
+#3560AC blue
+#2D1C69 dark blue
+#D9DFED grey
+-->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-  
-<title>Alternate</title>
 
+<title>Alternate</title>
 <head></head>
 
-<main>
-    <div id="ImageViewer" style="
-        position: fixed;
-        top: 0%;
-        left: 0%;
-        width: 100%; 
-        height: 100%;
-        opacity: 1%;
-        background: linear-gradient(rgba(11, 5, 5, 0.844), #26110b);
-    ">
-    <div id="ImageViewerAnimatible" style="
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        top: 0%;
-        left: 0%;
-        width: 100%; 
-        height: 100%;
-    ">
-            <p style="
-            font-weight: 700; 
-            font-size: 40px;
-            text-align: center;
+<body>
+    <main>
+        <!-- <div class="BG"></div> -->
+        <div class="MainContainer">
+            <!-- <p class="Sub" style="
+                background-color: #000000;
+                padding: 12px 12px 12px;">!!This website is currently being working on atm, bugs may happen!!</p> -->
+            <div class="IconContainer" style="display: flex; flex-direction: row; align-items: center;">
+            <!-- text-shadow: rgb(0, 0, 0) 0px 1px 0px, rgb(0, 0, 0) 0px 2px 0px, rgb(0, 0, 0) 0px 3px 0px, rgb(0, 0, 0) 0px 7px 0px; -->
+            <h1 style="font-size: 60px;">ALTERNATE</h1>
+                <img src="Partyware.png" style="
+                height: 150px; 
+                margin-top: 0px;
+                margin-bottom: 0px;
+            "></div>
 
-            color: #c9845c;
-            border: 1px solid #5f382c;
-            background-color: #27151088;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            padding: 6px 16px;
-            border-radius: 10px;
-            " id="LoadedImageName">ALTERNATE ALTERNATE</p>
+            <h2>BIO LINKS</h2>
+            <div class="ListContainer" id="BioList">
 
-            <div id="LoadedImage" style="
-                aspect-ratio: 1/1;
-                display: inline-block;
-                flex: 1 1 calc(33.333% - 8px);
-                max-width: calc(33.333% - 8px);
-
-                background-repeat: no-repeat;
-                object-fit:contain;
-                background-size: contain;
-                background-position: center;
-                border-radius: 10px;
-                ">
             </div>
+            <h2>GAME LINKS</h2>
+            <div class="ListContainer" id="GamesList">
 
-            <p style="
-            font-weight: 500; 
-            font-size: 20px;
-            text-align: center;
+            </div>
+            <h2>CONTRIBUTIONS</h2>
+            <div class="ListContainer" id="ContributionsList">
 
-            color: #c9845c;
-            border: 1px solid #5f382c;
-            background-color: #27151088;
-            margin-top: 10px;
-            padding: 6px 16px;
-            border-radius: 10px;
-            " id="LoadedImageDesc">ALTERNATE ALTERNATE</p>
-
+            </div>
         </div>
-    </div>
 
-    <!-- <img src="FaceBoom.png" class="BG"> -->
-    <div class="BG"></div>
-    <div id="MainCon">
-        <header id="topbar">
-            <div class="row">
-                <h1>ALTERNATE</h1>
-                <img src="Pumkin.png" class="logo">
+        <div class="MainContainer">
+            <marquee direction="left" scrolldelay="100">WARNING, THIS WEBSITE IS WORK IN PROGRESS</marquee>
+            <div class="PostListContainer" id="PostList">
+
             </div>
-        </header>
-        <p class="Sub">Welcome to my wip website!</p>
-        <p class="Sub">This is where you can find media and socal links to my stuff</p>
-        <p class="Sub">!!This website is currently being working on atm, bugs may happen!!</p>
-        <section>
-            <h2>- BIO LINKS</h2>
-            <div class="LinkList">
+        </div>
+        <!-- <div class="MainContainer">
+            <h2>DELVER GAMES</h2>
+            <div class="GameListContainer" id="DelverList">
 
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://discord.gg/ETgX9Az48b">
-                        <span>Discord Community</span>
-                        <span class="Badge">[Derivation Infestation]</span>
-                    </a>
-                </div>
-
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://x.com/Xnoir_Xnoir">
-                        <span>Twitter/X</span>
-                    </a>
-                </div>
-
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/users/1384870146/profile">
-                        <span>RBLX/Roblox</span>
-                    </a>
-                </div>
-
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.youtube.com/@Alternate_Individual">
-                        <span>Youtube</span>
-                    </a>
-                </div>
             </div>
-        </section>
-        <section>
-            <h2>- GAMES</h2>
-            <div class="LinkList">
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/114713146902784/Derivation-Infestation-Redevelopment">
-                        <span>Derivation Infestation</span>
-                        <span class="Badge">[CLOSED]</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/122692017027748/Everything-All-At-Once">
-                        <span>Everything All At Once</span>
-                        <span class="Badge">[CLOSED]</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/18640529329/Metro">
-                        <span>Metro</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/17553090685/Untitled-Game">
-                        <span>Maze Purgatory</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/14536336419/test-town">
-                        <span>Test Town</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>- CONTRIBUTIONS</h2>
-            <div class="LinkList">
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/7836133734/Minus-Elevation" style="border-color: rgb(163, 69, 69);">
-                        <img src="Media/Wander.png" class="MiniIcon">
-                        <span style="color: aliceblue;">Minus Elevation</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/15992788623/CLOSED-Tethered-Descent" style="border-color: rgb(175, 0, 0);">
-                        <img src="Media/Null.png" class="MiniIcon">
-                        <span style="color: aliceblue;">Tethered Decent</span>
-                        <span class="Badge">[CLOSED]</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/13179256798/Addition-Abstraction" style="border-color: rgb(145, 130, 130);">
-                        <img src="Media/AA.png" class="MiniIcon">
-                        <span style="color: aliceblue;">Addition Abstraction</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/13620547054/Splashdown" style="border-color: rgb(18, 99, 136);">
-                        <span style="color: aliceblue;">Splashdown</span>
-                        <span class="Badge">[CLOSED]</span>
-                    </a>
-                </div>
-                <div class="LinkConMain">
-                    <a class="LinkCon" href="https://www.roblox.com/games/86209472404402/CONSOLE-Crimson-Chronicles-ASYM" style="border-color: rgb(143, 18, 18);">
-                        <span style="color: aliceblue;">Crimson Chronicles</span>
-                        <span class="Badge">[PRE ALPHA TESTING]</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <div class="MainCon">
-        <h2>- ART IMAGES</h2>
-        <section id="ImageView"></section>
-        <h2>- GAME IMAGES</h2>
-        <section id="GameImageView"></section>
-    </div>
-</main>
+        </div> -->
+    </main>
+</body>
 
-<script>
-    document.querySelectorAll('.LinkCon').forEach((el, index) => {
-    el.style.animationDelay = `${index * 0.05}s`;
-    });
-    document.querySelectorAll('.LinkConMain').forEach((el, index) => {
-    el.style.animationDelay = `${index * 0.05}s`;
-    });
-    document.querySelectorAll('.Media').forEach((el, index) => {
-    el.style.animationDelay = `${index * 0.05}s`;
-    });
-</script>
-<script src="script.js"></script>
+<script src="Links.js"></script>
+<script src="Posts.js"></script>
+<!-- <script src="DelverGames.js"></script> -->
