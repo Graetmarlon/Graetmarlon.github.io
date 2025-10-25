@@ -9,6 +9,10 @@ body {
     min-height: 100vh;
     overflow-y: auto;
     margin: 0;
+    /* background-image: url(Sky.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
 }
 
 main {

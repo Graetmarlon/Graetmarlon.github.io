@@ -24,75 +24,80 @@ const PostData = {
         type: "RegularPost",
     },
     [3] : {
-        ImageUrl: "AlternateAlternate",
-        Date: "7/28/25",
-        SectionID: "ArtList",
-        type: "ImagePost",
+        header: 'ARTISTIC ENDEAVOURS',
+        SectionID: "PostList",
+        type: "Header",
     },
     [4] : {
-        ImageUrl: "GUMBALLER",
-        Date: "5/4/25",
-        SectionID: "ArtList",
+        ImageUrl: "AlternateAlternate",
+        Date: "7/28/25",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [5] : {
-        ImageUrl: "Lethal",
-        Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        ImageUrl: "GUMBALLER",
+        Date: "5/4/25",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [6] : {
-        ImageUrl: "Alternate2",
+        ImageUrl: "Lethal",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [7] : {
-        ImageUrl: "Alternate1",
+        ImageUrl: "Alternate2",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [8] : {
-        ImageUrl: "Alternate",
+        ImageUrl: "Alternate1",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [9] : {
-        ImageUrl: "Smiler",
+        ImageUrl: "Alternate",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [10] : {
-        ImageUrl: "Sourling",
+        ImageUrl: "Smiler",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [11] : {
-        ImageUrl: "CoolKidArt-Alt",
+        ImageUrl: "Sourling",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [12] : {
-        ImageUrl: "Ascenders",
+        ImageUrl: "CoolKidArt-Alt",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [13] : {
-        ImageUrl: "Poision",
+        ImageUrl: "Ascenders",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
     [14] : {
+        ImageUrl: "Poision",
+        Date: "nil/nil/nil",
+        SectionID: "PostList",
+        type: "ImagePost",
+    },
+    [15] : {
         ImageUrl: "PeaceandTranquility",
         Date: "nil/nil/nil",
-        SectionID: "ArtList",
+        SectionID: "PostList",
         type: "ImagePost",
     },
 };
@@ -125,6 +130,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 NewTextCon.textContent = Data.Date
                 NewTextCon.classList.add("ImagePostDate");
                 NewPostCon.appendChild(NewTextCon)
+            }
+            if (Data.type == "Header") {
+                const NewTextCon = document.createElement("h2");
+                NewTextCon.classList.add("PostHeader")
+                NewTextCon.style.width = '100%'
+                NewTextCon.textContent = Data.header
+                Section.appendChild(NewTextCon);
             }
         }
     }
