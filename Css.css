@@ -109,6 +109,7 @@ span {
     max-height: 200px;
     width: 150px;
     height: 200px;
+
     background-color: var(--BackgroundColor);
     border: 2px solid var(--BoxBorderColor);
     text-decoration: none;

@@ -1,5 +1,5 @@
 const PostData = {
-    [1] : {
+    IDontKnowWhatToCallThis: {
         text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">BIO UPDATED 10/24/25</p>
                Hi hi!, I'm Alternate and welcome to my wip website, I like being a workaholic on scripting(Html, js, css, lua, frag), modeling, or drawing. 
                <br><br>
@@ -14,87 +14,96 @@ const PostData = {
         SectionID: "PostList",
         type: "RegularPost",
     },
-    [2] : {
+    TestVideo: {
+        text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/25/25 1:38 PM (EST)</p>
+                Test Video. (No Im not adding a description for this.)
+                <video width="100%" height="400" controls><source src="Videos/MD_Fangame_Dev.mp4" type="video/mp4" /></video>`,
+        SectionID: "PostList",
+        type: "RegularPost",
+    },
+    MoreJavaLessHtml: {
         text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/24/25 11:28 AM (EST)</p>
                 I wanted to update the website again with more java script instead of html.
                 And New Stuff like adding posts! (This was not easy to do, but it was worth it)
                 <br>
-                <img src="Gifs/luna-cat-crunchy-cat.gif" style="max-width: 200px; float:left; margin:5px; border-radius: 10px;">`,
+                <img src="Gifs/luna-cat-crunchy-cat.gif" style="max-width: 200px; float:left; margin:5px">`,
         SectionID: "PostList",
         type: "RegularPost",
     },
-    [3] : {
+    
+    ArtHeader: {
         header: 'ARTISTIC ENDEAVOURS',
         SectionID: "PostList",
         type: "Header",
     },
-    [4] : {
+
+    AlternateArt: {
         ImageUrl: "AlternateAlternate",
         Date: "7/28/25",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [5] : {
+    GumballerArt: {
         ImageUrl: "GUMBALLER",
         Date: "5/4/25",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [6] : {
+    LethalCompanyArt: {
         ImageUrl: "Lethal",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [7] : {
+    AlternitiveArt: {
         ImageUrl: "Alternate2",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [8] : {
+    AlternitiveArt1: {
         ImageUrl: "Alternate1",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [9] : {
+    AlternateArt1: {
         ImageUrl: "Alternate",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [10] : {
+    SmilerModel: {
         ImageUrl: "Smiler",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [11] : {
+    SourlingArt: {
         ImageUrl: "Sourling",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [12] : {
+    CookkidArt: {
         ImageUrl: "CoolKidArt-Alt",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [13] : {
+    AAGroupArt: {
         ImageUrl: "Ascenders",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [14] : {
+    PoisionArt: {
         ImageUrl: "Poision",
         Date: "nil/nil/nil",
         SectionID: "PostList",
         type: "ImagePost",
     },
-    [15] : {
+    PSArtSubmission: {
         ImageUrl: "PeaceandTranquility",
         Date: "nil/nil/nil",
         SectionID: "PostList",
