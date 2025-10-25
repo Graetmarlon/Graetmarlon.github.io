@@ -3,7 +3,7 @@ const LinkData = {
         LinkName : "Discord Community",
         Link : "https://discord.gg/ETgX9Az48b",
         SectionID : "BioList",
-        // CustomIcon : "Wander",
+        CustomIcon : "Wander",
         BadgeText: "[Derivation Infestation]",
     },
     [2] : {
@@ -89,19 +89,6 @@ const LinkData = {
         // CustomIcon : "Wander",
         BadgeText: "[PRE-ALPHA]",
     },
-}
-
-const ColorData = {
-    [1]: '#F95D7F',
-    [2]: '#F9F45D',
-    [3]: '#79F95D',
-    [4]: '#44EBFD',
-    [5]: '#3560AC',
-    [6]: '#D9DFED',
-}
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
