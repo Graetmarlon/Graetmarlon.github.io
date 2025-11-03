@@ -34,7 +34,7 @@ const PostData = {
     },
     NewMDFanGame: {
         text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/31/25 11:49 AM (EST)</p>
-                I been kinda quitet posting new stuff anywhere really, though I've decided to post here! you can see me and my friend made slight progress with the game such as elevator redesigning!
+                I been kinda quiet posting new stuff anywhere really, though I've decided to post here! you can see me and my friend made slight progress with the game such as elevator redesigning!
                 <br><br>I will most likely post more progress on the game soon.
                 <br>
                 <img src="Images/WIPMD_Fangame.png" style="max-width: 100%; float:left; margin:5px">`,
