@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="Css.css"/>
 <html lang="en" style="
-    --BackgroundColor: #0f141a;
-    --BoxColor: #1f1f1f7e;
-    --BoxBorderColor: #3d444db3;
+    --BackgroundColor: rgb(23 23 23);
+    --BoxColor: #323235;
+    --BoxBorderColor: #454549;
     
     --BoxHighlightColor: #313136;
     --BoxBorderHighlightColor: #ffffff;
 
-    --DefaultTextColor: #D9DFED;
+    --DefaultTextColor: #DDDDDD;
 ">
 
 <!-- 
@@ -24,41 +24,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <title>Alternate</title>
 <head></head>
 
 <body>
     <main>
-        <!-- <div class="BG"></div> -->
         <div class="MainContainer">
-            <div class="IconContainer" style="display: flex; flex-direction: row; align-items: center;">
-            <audio id="PumkinSound"><source src="Audio/shaq-jack-o-lantern.mp3" type="audio/mpeg" /></audio>
-            <h1 style="font-size: 60px;">ALTERNATE</h1>
-                <img src="Pumkin.png" onClick="document.getElementById('PumkinSound').play(); return false;" style="
+            <div class="IconContainer" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+            <!-- <audio id="PumkinSound"><source src="Audio/shaq-jack-o-lantern.mp3" type="audio/mpeg" /></audio> onClick="document.getElementById('PumkinSound').play(); return false;"-->
+            <h1 style="font-size: 80px; transform: skew(-10deg); margin-top: 0px; margin-bottom: 0px;">ALTERNATE</h1>
+                <img src="Partyware.png" style="
                 height: 150px; 
                 margin-top: 0px;
-                margin-bottom: 0px;
-            "></div>
-
-            <div class="ListContainer" id="LinkList">
-                
+                margin-bottom: 0px;">
             </div>
+            
+            <div class="PostListContainer" id="ButtonContainer"></div>    
+            <div class="PostListContainer" id="PostList"></div>
+            <div class="PostListContainer" id="CenterPostList"></div>
         </div>
-
         <div class="MainContainer">
-            <i class="fa-brands fa-github"></i>
-            <marquee direction="left" scrolldelay="100">WARNING, THIS WEBSITE IS WORK IN PROGRESS</marquee>
-            <div class="PostListContainer" id="PostList">
-
-            </div>
+            <div class="ListContainer" id="LinkList"></div>
+            <div class="PostListContainer" id="ImageList"></div>
         </div>
-        <!-- <div class="MainContainer">
-            <h2>DELVER GAMES</h2>
-            <div class="GameListContainer" id="DelverList">
-
-            </div>
-        </div> -->
     </main>
 </body>
 

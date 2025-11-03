@@ -9,10 +9,6 @@ body {
     min-height: 100vh;
     overflow-y: auto;
     margin: 0;
-    /* background-image: url(Sky.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; */
 }
 
 main {
@@ -25,26 +21,13 @@ main {
     gap: 10px;
 }
 
-.BG {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0.02;
-    background-image: url(ScanlinesTexture.png);
-    background-repeat: repeat;
-    background-size: 10px 10px;
-    animation: scrollY 0.25s linear infinite;
-    z-index: -10;
-}
-
 .MainContainer {
-    width: 720px;
+    width: 750px;
     padding: 24px 16px 48px;
+    gap: 10px;
 }
 
-span,h1,h2,p,marquee {
+span,h1,h2,p,marquee,i {
     color: var(--DefaultTextColor);
 }
 
@@ -56,8 +39,9 @@ span {
 .ListContainer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
+
 .GameListContainer {
     width: 550px;
     display: flex;
@@ -68,15 +52,15 @@ span {
 }
 
 .LinkContainer {
-    padding: 16px 14px;
-    /* border-radius: 10px; */
+    padding: 5px 5px;
+    border-radius: .75rem;
     background-color: var(--BoxColor);
-    border: 2px solid var(--BoxBorderColor);
+    border: 1px solid var(--BoxBorderColor);
     text-decoration: none;
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border-left: 5px solid var(--BoxBorderColor);
+    /* border-left: 5px solid var(--BoxBorderColor); */
 
     /* transform: skew(-5deg); */
 }
@@ -84,7 +68,7 @@ span {
 .LinkContainer:hover {
     scale: (1.2);
     background-color: var(--BoxHighlightColor);
-    border: 2px solid var(--BoxBorderHighlightColor);
+    border: 1px solid var(--BoxBorderHighlightColor);
     border-left: 10px solid var(--BoxBorderHighlightColor);
 }
 
@@ -97,23 +81,24 @@ span {
     clear: right;
     padding: 16px 14px;
     background-color: var(--BoxColor);
-    border: 2px solid var(--BoxBorderColor);
+    border: 1px solid var(--BoxBorderColor);
+    border-radius: .75rem;
     text-decoration: none;
     gap: 10px;
-    border-left: 5px solid var(--BoxBorderColor);
+    /* border-left: 5px solid var(--BoxBorderColor); */
     /* transform: skew(-5deg); */
 }
 
 .ImagePostContainer {
-    max-width: 150px;
+    max-width: 138px;
     max-height: 200px;
     width: 150px;
     height: 200px;
-
+    border-radius: .75rem;
     background-color: var(--BackgroundColor);
-    border: 2px solid var(--BoxBorderColor);
+    /* border: 1px solid var(--BoxBorderColor); */
     text-decoration: none;
-    border-left: 5px solid var(--BoxBorderColor);
+    /* border-left: 5px solid var(--BoxBorderColor); */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -148,8 +133,8 @@ span {
 .Badge {
     font-size: 12px;
     background-color: #11111100;
-    border: 2px solid var(--BoxBorderColor);
-    /* border-radius: 10px; */
+    border: 1px solid var(--BoxBorderColor);
+    border-radius: .75rem;
     padding: 6px 10px;
     margin-left: auto;
 }
@@ -160,8 +145,8 @@ span {
     height: 150px;
     overflow: hidden;
     padding: 10px;
-    /* border-radius: 10px; */
-    border: 2px solid var(--BoxBorderColor);
+    border-radius: .75rem;
+    border: 1px solid var(--BoxBorderColor);
     background: #111;
     transform: translate(0%);
 }
@@ -180,25 +165,48 @@ span {
 }
 
 i {
-    font-size: 20px;
-    width: 24px;
-    height: 24px;
-    text-align: center;
-    color: purple;
-    font-weight: 400;
-
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
+  font-size: 30px;
+  text-align: center;
 }
 
-/* @media screen and (max-width: 1000px) {
+.LinkButton {
+    text-decoration: none !important;
+    justify-content: center;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40px;
+    background-color: var(--BoxColor);
+    border: 1px solid var(--BoxBorderColor);
+    border-radius: .75rem;
+}
+
+.HeaderContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.HeaderText {
+    margin: 10px;
+    margin-left: 0px;
+    display: block;
+}
+.HeaderDivider {
+    flex: 1;
+    height: 2px;
+    margin-right: 8px;
+    background-color: var(--DefaultTextColor);
+}
+
+@media screen and (max-width: 1322px) {
     main {
         flex-direction: column;
-        align-items: stretch;
-        max-width: 900px;
+        width: 90%;
+        /* align-items: stretch; */
+        /* max-width: 1000px; */
     }
-} */
+    .MainContainer {
+        width: 96%;
+    }
+}

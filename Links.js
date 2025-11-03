@@ -88,41 +88,74 @@ const LinkData = {
         type: "Link",
     },
 
-    BioHeader: {
-        header: 'BIO LINKS',
-        SectionID: "LinkList",
-        type: "Header",
-    },
+    // BioHeader: {
+    //     header: 'BIO LINKS',
+    //     SectionID: "LinkList",
+    //     type: "Header",
+    // },
 
     Discord: {
-        LinkName : "Discord Community",
         Link : "https://discord.gg/ETgX9Az48b",
-        SectionID : "LinkList",
-        CustomIcon : "icon1",
-        BadgeText: "[Derivation Infestation]",
-        type: "Link",
+        SectionID: "ButtonContainer",
+        // CustomIcon : "icon1",
+        BrandIcon: "fa-brands fa-discord",
+        type: "Button",
     },
     Twitter: {
-        LinkName : "Twitter/X",
         Link : "https://x.com/Xnoir_Xnoir",
-        SectionID : "LinkList",
-        CustomIcon : "icon1",
-        type: "Link",
-    },
-    Roblox: {
-        LinkName : "RBLX/Roblox",
-        Link : "https://www.roblox.com/users/1384870146/profile",
-        SectionID : "LinkList",
-        CustomIcon : "icon1",
-        type: "Link",
+        SectionID: "ButtonContainer",
+        // CustomIcon : "icon1",
+        BrandIcon: "fa-brands fa-x-twitter",
+        type: "Button",
     },
     Youtube: {
-        LinkName : "Youtube",
         Link : "https://www.youtube.com/@Alternate_Individual",
-        SectionID : "LinkList",
-        CustomIcon : "icon1",
-        type: "Link",
+        SectionID: "ButtonContainer",
+        // CustomIcon : "icon1",
+        BrandIcon: "fa-brands fa-youtube",
+        type: "Button",
     },
+    Roblox: {
+        Link : "https://www.roblox.com/users/1384870146/profile",
+        SectionID: "ButtonContainer",
+        // CustomIcon : "icon1",
+        BrandIcon: "fa-brands fa-roblox",
+        type: "Button",
+    },
+
+    // Discord: {
+    //     LinkName : "Discord Community",
+    //     Link : "https://discord.gg/ETgX9Az48b",
+    //     SectionID : "LinkList",
+    //     // CustomIcon : "icon1",
+    //     BrandIcon: "fa-brands fa-discord",
+    //     BadgeText: "[Derivation Infestation]",
+    //     type: "Link",
+    // },
+    // Twitter: {
+    //     LinkName : "Twitter/X",
+    //     Link : "https://x.com/Xnoir_Xnoir",
+    //     SectionID : "LinkList",
+    //     // CustomIcon : "icon1",
+    //     BrandIcon: "fa-brands fa-x-twitter",
+    //     type: "Link",
+    // },
+    // Roblox: {
+    //     LinkName : "RBLX/Roblox",
+    //     Link : "https://www.roblox.com/users/1384870146/profile",
+    //     SectionID : "LinkList",
+    //     CustomIcon : "icon1",
+    //     // BrandIcon: "fa-brands fa-roblox",
+    //     type: "Link",
+    // },
+    // Youtube: {
+    //     LinkName : "Youtube",
+    //     Link : "https://www.youtube.com/@Alternate_Individual",
+    //     SectionID : "LinkList",
+    //     // CustomIcon : "icon1",
+    //     BrandIcon: "fa-brands fa-youtube",
+    //     type: "Link",
+    // },
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -143,7 +176,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     NewIcon.src = `Icons/${Data.CustomIcon}.png`
                     NewLinkCon.appendChild(NewIcon)
                 }
-
+                if (Data.BrandIcon) {
+                    const NewBrandIcon = document.createElement("i")
+                    NewBrandIcon.classList.add(...Data.BrandIcon.split(" "));
+                    NewLinkCon.appendChild(NewBrandIcon)
+                }
                 const NewSpan = document.createElement("span");
                 NewLinkCon.appendChild(NewSpan)
 
@@ -158,11 +195,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             if (Data.type == "Header") {
+                const HeaderContainer = document.createElement("div");
+                HeaderContainer.classList.add("HeaderContainer")
+                Section.appendChild(HeaderContainer);
+
                 const NewTextCon = document.createElement("h2");
-                NewTextCon.classList.add("PostHeader")
-                NewTextCon.style.width = '100%'
+                NewTextCon.classList.add("HeaderText")
                 NewTextCon.textContent = Data.header
-                Section.appendChild(NewTextCon);
+                HeaderContainer.appendChild(NewTextCon);
+
+                const HeaderDivider = document.createElement("div")
+                HeaderDivider.classList.add("HeaderDivider")
+                HeaderContainer.appendChild(HeaderDivider);
+            }
+            if (Data.type == "Button") {
+                const NewButton = document.createElement("a");
+                NewButton.classList.add("LinkButton")
+                NewButton.href = Data.Link
+                Section.appendChild(NewButton);
+
+                if (Data.BrandIcon) {
+                    const NewBrandIcon = document.createElement("i")
+                    NewBrandIcon.classList.add(...Data.BrandIcon.split(" "));
+                    NewButton.appendChild(NewBrandIcon)
+                }
             }
         }
      }

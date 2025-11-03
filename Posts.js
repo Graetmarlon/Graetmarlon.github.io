@@ -14,11 +14,38 @@ const PostData = {
         SectionID: "PostList",
         type: "RegularPost",
     },
+
+    PostHeader: {
+        header: 'RANDOM POSTS',
+        SectionID: "CenterPostList",
+        type: "Header",
+    },
+    MDFangameUpdate: {
+        text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">We need more updates! 11/3/25 3:34 PM (EST) </p>
+                The game is somewhat playable now :D, though it lacks a bit of content at the moment, that will change soon.
+                <br><br> I've added round handler, upgrades, and mechanics such as power and oxygen.
+                <br><br> Thats all I will be showing for now, hopefully more stuff will be posted here when theres more content to the game itself.
+
+                <img src="Images/ElevatorScreenshot.png" style="max-width: 100%; float:left; margin:5px">
+                <img src="Images/PowerOutage.png" style="max-width: 100%; float:left; margin:5px">
+                `,
+        SectionID: "CenterPostList",
+        type: "RegularPost",
+    },
+    NewMDFanGame: {
+        text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/31/25 11:49 AM (EST)</p>
+                I been kinda quitet posting new stuff anywhere really, though I've decided to post here! you can see me and my friend made slight progress with the game such as elevator redesigning!
+                <br><br>I will most likely post more progress on the game soon.
+                <br>
+                <img src="Images/WIPMD_Fangame.png" style="max-width: 100%; float:left; margin:5px">`,
+        SectionID: "CenterPostList",
+        type: "RegularPost",
+    },
     TestVideo: {
         text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/25/25 1:38 PM (EST)</p>
                 Test Video. (No Im not adding a description for this.)
                 <video width="100%" height="400" controls><source src="Videos/MD_Fangame_Dev.mp4" type="video/mp4" /></video>`,
-        SectionID: "PostList",
+        SectionID: "CenterPostList",
         type: "RegularPost",
     },
     MoreJavaLessHtml: {
@@ -27,86 +54,110 @@ const PostData = {
                 And New Stuff like adding posts! (This was not easy to do, but it was worth it)
                 <br>
                 <img src="Gifs/luna-cat-crunchy-cat.gif" style="max-width: 200px; float:left; margin:5px">`,
-        SectionID: "PostList",
+        SectionID: "CenterPostList",
         type: "RegularPost",
     },
     
     ArtHeader: {
         header: 'ARTISTIC ENDEAVOURS',
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "Header",
     },
 
     AlternateArt: {
         ImageUrl: "AlternateAlternate",
         Date: "7/28/25",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     GumballerArt: {
         ImageUrl: "GUMBALLER",
         Date: "5/4/25",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     LethalCompanyArt: {
         ImageUrl: "Lethal",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     AlternitiveArt: {
         ImageUrl: "Alternate2",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     AlternitiveArt1: {
         ImageUrl: "Alternate1",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     AlternateArt1: {
         ImageUrl: "Alternate",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     SmilerModel: {
         ImageUrl: "Smiler",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     SourlingArt: {
         ImageUrl: "Sourling",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     CookkidArt: {
         ImageUrl: "CoolKidArt-Alt",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     AAGroupArt: {
         ImageUrl: "Ascenders",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     PoisionArt: {
         ImageUrl: "Poision",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
     PSArtSubmission: {
         ImageUrl: "PeaceandTranquility",
         Date: "nil/nil/nil",
-        SectionID: "PostList",
+        SectionID: "ImageList",
+        type: "ImagePost",
+    },
+    OldDILobby: {
+        ImageUrl: "DILobbyScreenshot",
+        Date: "nil/nil/nil",
+        SectionID: "ImageList",
+        type: "ImagePost",
+    },
+    DIApartments: {
+        ImageUrl: "MapScreenshot",
+        Date: "nil/nil/nil",
+        SectionID: "ImageList",
+        type: "ImagePost",
+    },
+    DiscontinuedDIMap: {
+        ImageUrl: "DIMap",
+        Date: "nil/nil/nil",
+        SectionID: "ImageList",
+        type: "ImagePost",
+    },
+    RadioModel: {
+        ImageUrl: "Radio",
+        Date: "nil/nil/nil",
+        SectionID: "ImageList",
         type: "ImagePost",
     },
 };
@@ -127,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 NewPostCon.classList.add("ImagePostContainer");
                 Section.appendChild(NewPostCon);
 
-                const NewLinkCon = document.createElement("img");
+                const NewLinkCon = document.createElement("li");
                 Object.assign(NewLinkCon.style, {
                     backgroundImage: `url("Images/${Data.ImageUrl}.png")`,
                 });
@@ -141,11 +192,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 NewPostCon.appendChild(NewTextCon)
             }
             if (Data.type == "Header") {
+                const HeaderContainer = document.createElement("div");
+                HeaderContainer.classList.add("HeaderContainer")
+                Section.appendChild(HeaderContainer);
+
                 const NewTextCon = document.createElement("h2");
-                NewTextCon.classList.add("PostHeader")
-                NewTextCon.style.width = '100%'
+                NewTextCon.classList.add("HeaderText")
                 NewTextCon.textContent = Data.header
-                Section.appendChild(NewTextCon);
+                HeaderContainer.appendChild(NewTextCon);
+
+                const HeaderDivider = document.createElement("div")
+                HeaderDivider.classList.add("HeaderDivider")
+                HeaderContainer.appendChild(HeaderDivider);
             }
         }
     }
