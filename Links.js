@@ -9,7 +9,7 @@ const LinkData = {
         LinkName : "Derivation Infestation",
         Link : "https://www.roblox.com/games/114713146902784/Derivation-Infestation-Redevelopment",
         SectionID : "LinkList",
-        CustomIcon : "icon1",
+        CustomIcon : "icon3",
         BadgeText: "[CLOSED]",
         type: "Link",
     },
@@ -17,7 +17,7 @@ const LinkData = {
         LinkName : "Everything All At Once",
         Link : "https://www.roblox.com/games/122692017027748/Everything-All-At-Once",
         SectionID : "LinkList",
-        CustomIcon : "icon1",
+        CustomIcon : "icon3",
         BadgeText: "[CLOSED]",
         type: "Link",
     },
@@ -25,21 +25,21 @@ const LinkData = {
         LinkName : "Metro",
         Link : "https://www.roblox.com/games/18640529329/Metro",
         SectionID : "LinkList",
-        CustomIcon : "icon1",
+        CustomIcon : "icon3",
         type: "Link",
     },
     MazePurgatory: {
         LinkName : "Maze Purgatory",
         Link : "https://www.roblox.com/games/17553090685/Untitled-Game",
         SectionID : "LinkList",
-        CustomIcon : "icon1",
+        CustomIcon : "icon3",
         type: "Link",
     },
     TestTown: {
         LinkName : "Test Town",
         Link : "https://www.roblox.com/games/14536336419/test-town",
         SectionID : "LinkList",
-        CustomIcon : "icon1",
+        CustomIcon : "icon3",
         type: "Link",
     },
 
@@ -75,7 +75,7 @@ const LinkData = {
         LinkName : "Splashdown",
         Link : "https://www.roblox.com/games/13620547054/Splashdown",
         SectionID : "LinkList",
-        CustomIcon : "icon2",
+        CustomIcon : "icon4",
         BadgeText: "[CLOSED]",
         type: "Link",
     },
@@ -83,8 +83,16 @@ const LinkData = {
         LinkName : "Crimson Chronicles",
         Link : "https://www.roblox.com/games/86209472404402/CONSOLE-Crimson-Chronicles-ASYM",
         SectionID : "LinkList",
-        CustomIcon : "icon2",
+        CustomIcon : "icon3",
         BadgeText: "[PRE-ALPHA]",
+        type: "Link",
+    },
+    BoundlessPoolzone: {
+        LinkName : "Boundless Poolzone",
+        Link : "https://www.roblox.com/games/88548111068885/Boundless-Poolzone",
+        SectionID : "LinkList",
+        CustomIcon : "icon4",
+        BadgeText: "[CLOSED]",
         type: "Link",
     },
 
@@ -94,13 +102,13 @@ const LinkData = {
     //     type: "Header",
     // },
 
-    Discord: {
-        Link : "https://discord.gg/ETgX9Az48b",
-        SectionID: "ButtonContainer",
-        // CustomIcon : "icon1",
-        BrandIcon: "fa-brands fa-discord",
-        type: "Button",
-    },
+    // Discord: {
+    //     Link : "https://discord.gg/ETgX9Az48b",
+    //     SectionID: "ButtonContainer",
+    //     // CustomIcon : "icon1",
+    //     BrandIcon: "fa-brands fa-discord",
+    //     type: "Button",
+    // },
     Twitter: {
         Link : "https://x.com/Xnoir_Xnoir",
         SectionID: "ButtonContainer",
@@ -118,8 +126,8 @@ const LinkData = {
     Roblox: {
         Link : "https://www.roblox.com/users/1384870146/profile",
         SectionID: "ButtonContainer",
-        // CustomIcon : "icon1",
-        BrandIcon: "fa-brands fa-roblox",
+        CustomIcon: "icon4",
+        // BrandIcon: "fa-brands fa-roblox",
         type: "Button",
     },
 
@@ -218,6 +226,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     const NewBrandIcon = document.createElement("i")
                     NewBrandIcon.classList.add(...Data.BrandIcon.split(" "));
                     NewButton.appendChild(NewBrandIcon)
+                }
+                if (Data.CustomIcon) {
+                    const NewIcon = document.createElement("Img")
+                    NewIcon.src = `Icons/${Data.CustomIcon}.png`
+                    NewButton.appendChild(NewIcon)
                 }
             }
         }

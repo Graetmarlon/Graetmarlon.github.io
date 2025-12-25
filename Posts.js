@@ -16,10 +16,33 @@ const PostData = {
     },
 
     PostHeader: {
-        header: 'RANDOM POSTS',
+        header: 'DEVELOPMENT POSTS',
         SectionID: "CenterPostList",
         type: "Header",
     },
+
+    HugeMDFangameUpdate: {
+        text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">You're not going to believe this 12/25/25 5:29 PM (EST) </p>
+                This game has been in development for a while now, so lets take a quick look on what the game has added or changed.
+
+                <br><br> + UI Rework (+ New Types of Data [Effects,Statistics])
+                <br><br> + 3 Interactables (Crafting, Coffee Machine, Selling Machine)
+                <br><br> + Items (Stacking, Dropping, Using Functionality)
+                <br><br> + 20~ Effects
+                <br><br> + 1 New Map
+                <br><br> + Curse Voting
+                <br><br> + Upgrade Voting
+                <br><br>
+                <br><br> - Generation Rework (Custom rooms)
+                <br><br> - AI Small Rework (Barriers, Abilites)
+                <br><br> - Small Elevator Rework
+                <br><br>
+                Theres not really much to say so I'll just leave it as that.
+                `,
+        SectionID: "CenterPostList",
+        type: "RegularPost",
+    },
+
     MDFangameUpdate: {
         text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">We need more updates! 11/3/25 3:34 PM (EST) </p>
                 The game is somewhat playable now :D, though it lacks a bit of content at the moment, that will change soon.

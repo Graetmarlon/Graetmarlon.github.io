@@ -53,9 +53,10 @@ span {
 
 .LinkContainer {
     padding: 5px 5px;
-    border-radius: .75rem;
+    border-radius: var(--BorderRounding);
     background-color: var(--BoxColor);
-    border: 1px solid var(--BoxBorderColor);
+    border: var(--BorderStrokeSize) var(--BoxBorderColor);
+    box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor);
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -68,7 +69,7 @@ span {
 .LinkContainer:hover {
     scale: (1.2);
     background-color: var(--BoxHighlightColor);
-    border: 1px solid var(--BoxBorderHighlightColor);
+    border: var(--BorderStrokeSize) var(--BoxBorderHighlightColor);
     border-left: 10px solid var(--BoxBorderHighlightColor);
 }
 
@@ -81,8 +82,9 @@ span {
     clear: right;
     padding: 16px 14px;
     background-color: var(--BoxColor);
-    border: 1px solid var(--BoxBorderColor);
-    border-radius: .75rem;
+    border: var(--BorderStrokeSize) var(--BoxBorderColor);
+    box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor);
+    border-radius: var(--BorderRounding);
     text-decoration: none;
     gap: 10px;
     /* border-left: 5px solid var(--BoxBorderColor); */
@@ -94,7 +96,7 @@ span {
     max-height: 200px;
     width: 150px;
     height: 200px;
-    border-radius: .75rem;
+    border-radius: var(--BorderRounding);
     background-color: var(--BackgroundColor);
     /* border: 1px solid var(--BoxBorderColor); */
     text-decoration: none;
@@ -103,6 +105,10 @@ span {
     display: flex;
     flex-direction: column;
     /* transform: skew(-5deg); */
+
+    border: var(--BorderStrokeSize) var(--BoxBorderColor);
+    box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor);
+    border-radius: var(--BorderRounding);
 }
 .ImagePost {
     max-width: 100%;
@@ -133,8 +139,8 @@ span {
 .Badge {
     font-size: 12px;
     background-color: #11111100;
-    border: 1px solid var(--BoxBorderColor);
-    border-radius: .75rem;
+    border: var(--BorderStrokeSize) var(--BoxBorderColor);
+    border-radius: var(--BorderRounding);
     padding: 6px 10px;
     margin-left: auto;
 }
@@ -145,8 +151,8 @@ span {
     height: 150px;
     overflow: hidden;
     padding: 10px;
-    border-radius: .75rem;
-    border: 1px solid var(--BoxBorderColor);
+    border-radius: var(--BorderRounding);
+    border: var(--BorderStrokeSize) var(--BoxBorderColor);
     background: #111;
     transform: translate(0%);
 }
@@ -178,8 +184,9 @@ i {
     gap: 10px;
     width: 40px;
     background-color: var(--BoxColor);
-    border: 1px solid var(--BoxBorderColor);
-    border-radius: .75rem;
+    border: var(--BorderStrokeSize) var(--BoxBorderColor);
+    box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor);
+    border-radius: var(--BorderRounding);
 }
 
 .HeaderContainer {
