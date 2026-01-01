@@ -87,6 +87,14 @@ const LinkData = {
         BadgeText: "[PRE-ALPHA]",
         type: "Link",
     },
+    MinuzDowning: {
+        LinkName : "Minuz Downing",
+        Link : "https://www.roblox.com/games/87790004251798/Minuz-Downing",
+        SectionID : "LinkList",
+        CustomIcon : "icon3",
+        BadgeText: "[INDEV]",
+        type: "Link",
+    },
     BoundlessPoolzone: {
         LinkName : "Boundless Poolzone",
         Link : "https://www.roblox.com/games/88548111068885/Boundless-Poolzone",

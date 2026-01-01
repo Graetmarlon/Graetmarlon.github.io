@@ -87,6 +87,12 @@ const PostData = {
         type: "Header",
     },
 
+    AlternateArt2: {
+        ImageUrl: "Alternate3",
+        Date: "12/31/25",
+        SectionID: "ImageList",
+        type: "ImagePost",
+    },
     AlternateArt: {
         ImageUrl: "AlternateAlternate",
         Date: "7/28/25",
