@@ -16,9 +16,10 @@ body {
 }
 
 main {
-    max-width: 75%;
+    max-width: 90%;
+    max-height: 100%;
     margin: 0 auto;
-    padding: 24px 16px 48px;
+    /* padding: 24px 16px 48px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -84,14 +85,31 @@ main {
     pointer-events: none
 }
 
-.MainContainer {
-    width: 750px;
+.Banner {
+    width: 100%;
+    height: 50px;
     padding: 24px 16px 48px;
-    gap: 10px;
+    /* gap: 10px; */
+}
+.MainContainer {
+    /* display: contents; */
+    width: 33%;
+
+    display: grid;
+    flex-direction: row;
+    /* justify-content: center; */
+
+    padding: 0px 0px 0px 0px;
+    /* gap: 10px; */
 }
 
 span,h1,h2,p,marquee,i,a {
     color: var(--DefaultTextColor);
+    font-size: 0.875rem;
+}
+
+h2 {
+   font-size: 1.5rem; 
 }
 
 span {
@@ -100,6 +118,7 @@ span {
 }
 
 .ListContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -110,7 +129,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 10px;
+    /* gap: 10px; */
     margin: 0 4px;
 }
 
@@ -123,7 +142,7 @@ span {
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    /* gap: 10px; */
     /* border-left: 5px solid var(--BoxBorderColor); */
 
     /* transform: skew(-5deg); */
@@ -145,28 +164,17 @@ span {
 }
 
 .PostListContainer {
-    gap: 10px;
+    /* width: 100%; */
+    height: 10%;
+    /* gap: 10px; */
     display: flex;
     flex-wrap: wrap;
+
+    padding: 10px 10px 10px 10px;
 }
 .PostContainer {
-    perspective: 800px;           /* ← FOV (smaller = stronger depth) */
-    perspective-origin: center;
-
     width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-
-    /* base rotation */
-    transform:
-        translateZ(-131px)
-        rotateX(1deg)
-        rotateY(-1.3deg)
-        rotateZ(0.7deg);
-
-    transition: transform 0.15s ease-out;
-    will-change: transform;
-
+    
     clear: right;
     padding: 16px 14px;
     background-color: var(--BoxColor);
@@ -174,14 +182,15 @@ span {
     box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor);
     border-radius: var(--BorderRounding);
     text-decoration: none;
-    gap: 10px;
+
+    /* gap: 10px; */
     /* border-left: 5px solid var(--BoxBorderColor); */
 }
 
 .ImagePostContainer {
-    max-width: 138px;
+    max-width: 33.33%;
     max-height: 200px;
-    width: 150px;
+    width: 32%;
     height: 200px;
     border-radius: var(--BorderRounding);
     background-color: var(--BackgroundColor);
@@ -224,7 +233,7 @@ span {
 }
 
 .Badge {
-    font-size: 12px;
+    font-size: 0.875rem;
     background-color: #11111100;
     border: var(--BorderStrokeSize) var(--BoxBorderColor);
     border-radius: var(--BorderRounding);
@@ -258,18 +267,19 @@ span {
 }
 
 i {
-  font-size: 30px;
+  font-size: 0.875rem;
   text-align: center;
 }
 
 .LinkButton {
     text-decoration: none !important;
     justify-content: center;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 40px;
+    width: 33.2%;
+    height: 5%;
     background-color: var(--BoxColor);
     border: var(--BorderStrokeSize) var(--BoxBorderColor);
     box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor);
@@ -296,11 +306,11 @@ i {
 @media screen and (max-width: 1322px) {
     main {
         flex-direction: column;
-        width: 90%;
+        /* width: 90%; */
         /* align-items: stretch; */
         /* max-width: 1000px; */
     }
     .MainContainer {
-        width: 96%;
+        width: 100%;
     }
 }

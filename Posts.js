@@ -15,6 +15,16 @@ const PostData = {
         type: "RegularPost",
     },
 
+    MoreJavaLessHtml: {
+        text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/24/25 11:28 AM (EST)</p>
+                I wanted to update the website again with more java script instead of html.
+                And New Stuff like adding posts! (This was not easy to do, but it was worth it)
+                <br>
+                <img src="Gifs/luna-cat-crunchy-cat.gif" style="max-width: 200px; float:left; margin:5px">`,
+        SectionID: "PostList",
+        type: "RegularPost",
+    },
+
     PostHeader: {
         header: 'DEVELOPMENT POSTS',
         SectionID: "CenterPostList",
@@ -49,8 +59,8 @@ const PostData = {
                 <br><br> I've added round handler, upgrades, and mechanics such as power and oxygen.
                 <br><br> Thats all I will be showing for now, hopefully more stuff will be posted here when theres more content to the game itself.
 
-                <img src="Images/ElevatorScreenshot.png" style="max-width: 100%; float:left; margin:5px">
-                <img src="Images/PowerOutage.png" style="max-width: 100%; float:left; margin:5px">
+                <img src="Images/ElevatorScreenshot.png" style="max-width: 50%; float:left; margin:5px">
+                <img src="Images/PowerOutage.png" style="max-width: 50%; float:left; margin:5px">
                 `,
         SectionID: "CenterPostList",
         type: "RegularPost",
@@ -60,7 +70,7 @@ const PostData = {
                 I been kinda quiet posting new stuff anywhere really, though I've decided to post here! you can see me and my friend made slight progress with the game such as elevator redesigning!
                 <br><br>I will most likely post more progress on the game soon.
                 <br>
-                <img src="Images/WIPMD_Fangame.png" style="max-width: 100%; float:left; margin:5px">`,
+                <img src="Images/WIPMD_Fangame.png" style="max-width: 50%; float:left; margin:5px">`,
         SectionID: "CenterPostList",
         type: "RegularPost",
     },
@@ -68,15 +78,6 @@ const PostData = {
         text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/25/25 1:38 PM (EST)</p>
                 Test Video. (No Im not adding a description for this.)
                 <video width="100%" height="400" controls><source src="Videos/MD_Fangame_Dev.mp4" type="video/mp4" /></video>`,
-        SectionID: "CenterPostList",
-        type: "RegularPost",
-    },
-    MoreJavaLessHtml: {
-        text: `<p style="font-weight: 700; font-size: 25px; margin-top: 0px">10/24/25 11:28 AM (EST)</p>
-                I wanted to update the website again with more java script instead of html.
-                And New Stuff like adding posts! (This was not easy to do, but it was worth it)
-                <br>
-                <img src="Gifs/luna-cat-crunchy-cat.gif" style="max-width: 200px; float:left; margin:5px">`,
         SectionID: "CenterPostList",
         type: "RegularPost",
     },

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.PostContainer');
+  const elements = document.querySelectorAll('.ImagePostContainer');
 
   const MAX_ROT_X = 25;
   const MAX_ROT_Y = 25;

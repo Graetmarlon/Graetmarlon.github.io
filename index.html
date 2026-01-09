@@ -2,14 +2,14 @@
 <link rel="stylesheet" href="Css.css"/>
 <html lang="en" style="
     --BackgroundColor: rgb(175, 175, 175);
-    --BoxColor: #000000bb;
+    --BoxColor: #0000007e;
     
     --BoxHighlightColor: #414141;
     --BoxBorderHighlightColor: #4f4f4f;
 
     --DefaultTextColor: #ffffff;
 
-    --BoxBorderColor: #00000061;
+    --BoxBorderColor: #00000075;
     --BorderRounding: 0;
     --BorderStrokeSize: 3px solid;
     --BorderGlowSize: 10px;
@@ -32,29 +32,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
 <title>Alternate</title>
-<head></head>
+<head>
+  <a class="VolumeButton">NOW PLAYING: [Yume 2kki OST - Exclamation Zone]</a>
+  <a class="VolumeButton" id="muteBtn" href="javascript:bgm.volume(0);">mute</a>
+  <a class="VolumeButton" id="unmuteBtn" href="javascript:bgm.volume(0.2);">unmute</a>
+
+  <h1 style="font-size: 80px; transform: skew(-10deg); margin-top: 0px; margin-bottom: 0px; text-align: center;">ALTERNATE</h1>
+    <!-- <img src="Teleportation.png" style="
+    height: 150px; 
+    margin-top: 0px;
+    margin-bottom: 0px;">
+    </img> -->
+</head>
 
 <body>
     <main>
         <div class="Scanlines"></div>
         <div class="TileBackground"></div>
         <div class="ColoredBackground"></div>
+        <!-- <div class="PostListContainer" id="ButtonContainer"></div>    -->
 
-
-        <div class="MainContainer">
-            <div class="IconContainer" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
-            <!-- <audio id="PumkinSound"><source src="Audio/shaq-jack-o-lantern.mp3" type="audio/mpeg" /></audio> onClick="document.getElementById('PumkinSound').play(); return false;"-->
-            <h1 style="font-size: 80px; transform: skew(-10deg); margin-top: 0px; margin-bottom: 0px;">ALTERNATE</h1>
-                <img src="Teleportation.png" style="
-                height: 150px; 
-                margin-top: 0px;
-                margin-bottom: 0px;">
-            </div>
-            
+        <!-- <div class="MainContainer" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="IconContainer" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div class="PostListContainer" id="ButtonContainer"></div>    
             <div class="PostListContainer" id="PostList"></div>
             <div class="PostListContainer" id="CenterPostList"></div>
         </div>
+
         <div class="MainContainer">
             <a class="VolumeButton">NOW PLAYING: [Yume 2kki OST - Exclamation Zone]</a>
             <a class="VolumeButton" href="javascript:bgm.volume(0);">mute</a>
@@ -62,8 +66,24 @@
 
             <div class="ListContainer" id="LinkList"></div>
             <div class="PostListContainer" id="ImageList"></div>
+        </div> -->
+
+        <div class="MainContainer" style="background-color: #1e222b71; width: 100%;">
+          <div class="ListContainer" id="LinkList"></div>  
         </div>
+        <div class="MainContainer" style="background-color: #292b2f6c; width: 100%;">
+          <div class="PostListContainer" id="PostList"></div>
+        </div>
+        <div class="MainContainer" style="background-color: #292b2f6c; width: 100%;">
+          <div class="PostListContainer" id="ImageList"></div>
+        </div>
+        <!-- <div class="MainContainer" style="background-color: #47392d6c; width: 30%;"> -->
+            <!-- <div class="PostListContainer" id="CenterPostList"></div> -->
+            <!-- <div class="PostListContainer" id="ImageList"></div> -->
+        <!-- </div> -->
     </main>
+    <div class="PostListContainer" id="CenterPostList"></div>
+    <div class="PostListContainer" id="ImageList"></div>
 </body>
 
 <script>
