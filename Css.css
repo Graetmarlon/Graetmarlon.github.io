@@ -85,7 +85,7 @@ main {
     pointer-events: none
 }
 
-#Shader {
+.Shader {
     z-index: -98;
     /* opacity: 0.5; */
     width: 100%;
