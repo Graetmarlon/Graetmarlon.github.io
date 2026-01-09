@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
 <title>Alternate</title>
 <head></head>
@@ -38,6 +39,7 @@
         <div class="Scanlines"></div>
         <div class="TileBackground"></div>
         <div class="ColoredBackground"></div>
+
 
         <div class="MainContainer">
             <div class="IconContainer" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
@@ -54,22 +56,35 @@
             <div class="PostListContainer" id="CenterPostList"></div>
         </div>
         <div class="MainContainer">
+            <a class="VolumeButton">NOW PLAYING: [Yume 2kki OST - Exclamation Zone]</a>
+            <a class="VolumeButton" href="javascript:bgm.volume(0);">mute</a>
+            <a class="VolumeButton" href="javascript:bgm.volume(0.2);">unmute</a>
+
             <div class="ListContainer" id="LinkList"></div>
             <div class="PostListContainer" id="ImageList"></div>
         </div>
     </main>
 </body>
 
-<audio id="bgMusic" src="Yume 2kki OST - Exclamation Zone.mp3" autoplay loop></audio>
-
 <script>
-  const audio = document.getElementById('bgMusic');
-  audio.volume = 0.15;
-  audio.style.display = 'none';
-  audio.play().catch(e => {
-    console.log('Autoplay blocked, will play after interaction.');
+  var bgm = new Howl({
+    src: ["Yume 2kki OST - Exclamation Zone.mp3"],
+    loop: true,
+    volume: 0
+  });
+
+  bgm.play();
+  bgm.fade(0, 0.2, 4000);
+
+  document.getElementById("muteBtn").addEventListener("click", function() {
+    bgm.volume(0);
+  });
+
+  document.getElementById("unmuteBtn").addEventListener("click", function() {
+    bgm.volume(0.2);
   });
 </script>
+
 
 <script src="Links.js"></script>
 <script src="Posts.js"></script>
