@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="Css.css"/>
 <html lang="en" style="
-    --BackgroundColor: rgb(0, 0, 0);
-    --BoxColor: #000000;
+    --BackgroundColor: rgb(175, 175, 175);
+    --BoxColor: #000000bb;
     
     --BoxHighlightColor: #414141;
     --BoxBorderHighlightColor: #4f4f4f;
@@ -35,6 +35,10 @@
 
 <body>
     <main>
+        <div class="Scanlines"></div>
+        <div class="TileBackground"></div>
+        <div class="ColoredBackground"></div>
+
         <div class="MainContainer">
             <div class="IconContainer" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
             <!-- <audio id="PumkinSound"><source src="Audio/shaq-jack-o-lantern.mp3" type="audio/mpeg" /></audio> onClick="document.getElementById('PumkinSound').play(); return false;"-->
@@ -56,6 +60,19 @@
     </main>
 </body>
 
+<audio id="bgMusic" src="Yume 2kki OST - Exclamation Zone.mp3" autoplay loop></audio>
+
+<script>
+  const audio = document.getElementById('bgMusic');
+  audio.volume = 0.15;
+  audio.style.display = 'none';
+  audio.play().catch(e => {
+    console.log('Autoplay blocked, will play after interaction.');
+  });
+</script>
+
 <script src="Links.js"></script>
 <script src="Posts.js"></script>
+<script src="Fake3D.js"></script>
+
 <!-- <script src="DelverGames.js"></script> -->
