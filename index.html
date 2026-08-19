@@ -1,99 +1,146 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="Css.css"/>
 <html lang="en" style="
-    --BackgroundColor: rgb(175, 175, 175);
-    --BoxColor: #0000007e;
+    --BackgroundColor: #000000b0;
+    --BoxColor: rgb(0, 0, 0);
     
-    --BoxHighlightColor: #414141;
-    --BoxBorderHighlightColor: #4f4f4f;
+    --BoxHighlightColor: #000000;
+    --BoxBorderHighlightColor: #000000;
 
     --DefaultTextColor: #ffffff;
 
-    --BoxBorderColor: #00000075;
-    --BorderRounding: 0;
+    --BoxBorderColor: #000000;
+    --BorderRounding: 8px;
     --BorderStrokeSize: 3px solid;
     --BorderGlowSize: 10px;
 ">
-
-<!-- 
-#F95D7F red 
-#F9F45D yellow
-#79F95D green
-#44EBFD light blue
-#3560AC blue
-#2D1C69 dark blue
-#D9DFED grey
--->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-
-<title>Alternate</title>
-<head>
-  <a class="VolumeButton">NOW PLAYING: [Yume 2kki OST - Exclamation Zone]</a>
-  <a class="VolumeButton" id="muteBtn" href="javascript:bgm.volume(0);">mute</a>
-  <a class="VolumeButton" id="unmuteBtn" href="javascript:bgm.volume(0.2);">unmute</a>
-
-  <h1 style="font-size: 80px; transform: skew(-10deg); margin-top: 0px; margin-bottom: 0px; text-align: center;">ALTERNATE</h1>
-    <!-- <img src="Teleportation.png" style="
-    height: 150px; 
-    margin-top: 0px;
-    margin-bottom: 0px;">
-    </img> -->
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+<title>Alternate-Dev</title>
 
 <body>
-    <main>
-        <div class="Scanlines"></div>
-        <div class="TileBackground"></div>
-        <div class="ColoredBackground"></div>   
-        <canvas id="Shader"></canvas>
+  <div class="Scanlines"></div>
+  <div class="SkyBackground"></div>   
+  <canvas id="Shader"></canvas>
+  
+  <div class="BannerContainer">
+    <h2 class="LogoText PinkGlow" style="margin: 0px 0px 0px 10px;">ALTERNATE-ALT.DEV</h2>
+    <h2 class="PinkGlow">We'll meet again someday.</h2>
+    <div class="HeaderDivider"></div>
+    <h2 id="EST-Clock">00:00:00</h2>
+    <div class="BannerBG"></div>
+  </div>
 
-        <div class="MainContainer" style="background-color: #1e222b71; width: 100%;">
-          <div class="ListContainer" id="LinkList"></div>  
+  <div class="Main">
+    <div class="MainNavigationContainer">
+      <div class="BoxContainer">
+        <h2 class="PinkGlow">NAVIGATION ✦</h2>
+        <div class="NavigationButtons">
+          <a href="Home.html">✦ HOME</a>
+          <a href="Art.html">✦ ART</a>
+          <a style="color: #572531;">✦ DEVELOPMENT TOOLS [WIP]</a>
         </div>
-        <div class="MainContainer" style="background-color: #292b2f6c; width: 100%;">
-          <div class="PostListContainer" id="PostList"></div>
+      </div>
+
+      <div class="BoxContainer">
+        <h2 class="PinkGlow">WEBRING STAMPS</h2>
+        <img class="WebringStamp" src="Images/WebringStickers/Cadence.gif">
+        <img class="WebringStamp" src="Images/WebringStickers/Telefrager.gif">
+        <img class="WebringStamp" src="Images/WebringStickers/Miku.png">
+        <img class="WebringStamp" src="Images/WebringStickers/SeaBunny.gif">
+        <img class="WebringStamp" src="Images/WebringStickers/CityScape.png">
+        <img class="WebringStamp" src="Images/WebringStickers/Undertale.gif">
+        <img class="WebringStamp" src="Images/WebringStickers/kriswhere.png">
+        <img class="WebringStamp" src="Images/WebringStickers/wibble.gif">
+        <img class="WebringStamp" src="Images/WebringStickers/lucky.gif">
+        <img class="WebringStamp" src="Images/WebringStickers/Monika.png">
+        <img class="WebringStamp" src="Images/WebringStickers/LemonDemon.png">
+        <img class="WebringStamp" src="Images/WebringStickers/TallyHall.png">
+      </div>
+
+    </div>
+
+    <!-- Navigation stuff like home art etc using other htmls -->
+    <div class="MainContainer" id="MainContainer">
+      
+    </div>
+
+    <div class="MainArtContainer">
+      <div class="BoxContainer">
+        <h2 class="PinkGlow">PROFOLIO ✦</h2>
+
+        <div class="ProfoloHolder ">
+          <img class="ProfoloPfp" style="border-radius: 200px;" src="Images/AlternatePfp.png">
+          <div class="ProfoloInfo">
+            <P>Alternate_ (@notorislash)</P>
+            <P>He/Him/She/Her</P>
+            <P>[Game dev] [Artist] [Music Enjoyer]</P>
+          </div>
         </div>
-        <div class="MainContainer" style="background-color: #292b2f6c; width: 100%;">
-          <div class="PostListContainer" id="ImageList"></div>
+
+      </div>
+
+      <div class="BoxContainer">
+        <h2 class="PinkGlow">PROJECTS ✦</h2>
+        <div class="LinkContainer">
+          <a href="https://www.roblox.com/games/126938468079776/7-Days-At-The-Facility">✦ 7 Days at the facility</a>
+          <a href="https://www.roblox.com/games/18640529329/Metro">✦ Metro</a>
+          <a href="https://www.roblox.com/games/17553090685/Untitled-Game">✦ Maze Purgatory</a>
+          <a style="color: #572531;">✦ Deviation Infestation [Closed]</a>
         </div>
-        <!-- <div class="MainContainer" style="background-color: #47392d6c; width: 30%;"> -->
-            <!-- <div class="PostListContainer" id="CenterPostList"></div> -->
-            <!-- <div class="PostListContainer" id="ImageList"></div> -->
-        <!-- </div> -->
-    </main>
-    <div class="PostListContainer" id="CenterPostList"></div>
-    <div class="PostListContainer" id="ImageList"></div>
+
+        <h2 class="PinkGlow">CONTRIBUTIONS ✦</h2>
+        <div class="LinkContainer">
+          <a href="https://www.roblox.com/games/129279692364812/Nullscape">✦ Nullscape</a>
+          <a href="https://www.roblox.com/games/7836133734/Minus-Elevation">✦ Minus Elevation</a>
+          <a href="https://www.roblox.com/games/13179256798/Addition-Abstraction">✦ Addition Abstraction</a>
+          <a href="https://www.roblox.com/games/14536336419/test-town">✦ Test Town</a>
+          <a href="https://www.roblox.com/games/15992788623/Tethered-Descent" style="color: #572531;">✦ Tethered Descent [Closed]</a>
+          <a style="color: #572531;">✦ Splashdown [Closed]</a>
+        </div>
+      </div>
+
+      <div class="BoxContainer">
+        <h2 class="PinkGlow">FEATURED ART ✦</h2>
+        <div class="ListContainer">
+          <a href="Images/Art/AlternateAlternate0.png"> <img class="FeaturedArtImageCard" src="Images/Thumbnails/AlternateAlternate0.png"></a>
+          <a href="Images/Art/AlternateAlternate.png"> <img class="FeaturedArtImageCard" src="Images/Thumbnails/AlternateAlternate.png"></a>
+        </div>
+      </div>
+
+      <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="3" loop="infinite">
+          <a href="https://dimden.dev/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/Dimden.gif" alt="Dimden"></a>
+          <a href="https://ellenthekat.nekoweb.org" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/EllensDen.png" alt="ellenthekat" title="oOoOoOo, you wanna click on this don't ya?"></a>
+          <a href="https://nekoweb.org/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/NekoWeb.webp" alt="NekoWeb"></a>
+          <a href="https://deltarune.com/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/krisbtn.png" alt="KRISS"></a>
+          <a href="https://www.noti.tg/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/notitg.png" alt="Not in the groove 2"></a>
+          <a href="https://theabsoluterealm.com/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/absolute-realm.gif" alt="absolute-realm"></a>
+          <a href="https://ryzzica.xyz/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/jecket.gif" alt="ryzzica"></a>
+          <a href="https://nomnomnami.com/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/Nami.gif" alt="Nami"></a>
+          <a href="https://maphren.neocities.org/" target="_blank" style="margin: 0px;"><img src="Images/WebringButtons/maphren.gif" alt="Maphren"></a>
+      </marquee>
+
+    </div>
+  </div>
+
+  <div class="BoxContainer">
+    <div class="HorizoltalListContainer">
+        <h2 class="PinkGlow">SOCALS</h2>
+        <a href="https://www.roblox.com/users/1384870146/profile">✦ Roblox Profile</a>
+        <a href="https://discord.gg/M7fWnTfGTh">✦ Discord Server</a>
+        <a href="https://www.youtube.com/@Alternate_Individual">✦ Youtube Profile</a>
+    </div>
+
+      <div class="WarningBanner">
+        <p>Notice that this website is still in development and needs lots of work and polishing.<p>
+      </div>
+  </div>
 </body>
 
-<script>
-  var bgm = new Howl({
-    src: ["Yume 2kki OST - Exclamation Zone.mp3"],
-    loop: true,
-    volume: 0
-  });
-
-  bgm.play();
-  bgm.fade(0, 0.2, 4000);
-
-  document.getElementById("muteBtn").addEventListener("click", function() {
-    bgm.volume(0);
-  });
-
-  document.getElementById("unmuteBtn").addEventListener("click", function() {
-    bgm.volume(0.2);
-  });
-</script>
-
-<script src="Links.js"></script>
-<script src="Posts.js"></script>
-<script src="Fake3D.js"></script>
 <script src="Shader.js"></script>
-
-<!-- <script src="DelverGames.js"></script> -->
+<script src="Clock.js"></script>
+<script src="Navigation.js"></script>
