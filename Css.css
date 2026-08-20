@@ -12,6 +12,15 @@
     to {opacity: 1;}
 }
 
+@keyframes MarqueeAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 main {
     width: 900px;
     margin: 0 auto;
@@ -459,13 +468,4 @@ body {
 
 .MarqueeGradient {
     mask-image: linear-gradient(to left, transparent, transparent 2%, white);
-}
-
-@keyframes MarqueeAnimation {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }
