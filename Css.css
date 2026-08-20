@@ -451,14 +451,17 @@ body {
     white-space: nowrap; 
     overflow: hidden;
 }
-.Marquee {
+
+.MarqueeMain {
     display: inline-block; 
-    animation: marquee 15s linear infinite;
+    animation: MarqueeAnimation 15s linear infinite;
 }
+
 .MarqueeGradient {
     mask-image: linear-gradient(to left, transparent, transparent 2%, white);
 }
-@keyframes marquee {
+
+@keyframes MarqueeAnimation {
     0% {
         transform: translateX(0%);
     }
