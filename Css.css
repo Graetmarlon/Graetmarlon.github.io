@@ -7,29 +7,13 @@
   to {background-position: 200px 200px;}
 }
 
-@keyframes flickering {
-    from {opacity: 0.75;}
-    to {opacity: 1;}
-}
-
 @keyframes MarqueeAnimation {
-    0% {
+    from {
         transform: translateX(0%);
     }
-    100% {
+    to {
         transform: translateX(-50%);
     }
-}
-
-main {
-    width: 900px;
-    margin: 0 auto;
-    display: flex;
-    gap: 10px;
-}
-
-.Flickering {
-    animation: flickering 0.07s infinite
 }
 
 .Scanlines {
@@ -50,214 +34,6 @@ main {
     animation: scroll-Y 1s linear infinite;
     pointer-events: none;
 }
-
-/* .TileBackground {
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    z-index: -100;
-
-    opacity: 0.5;
-    background-image: url(Sky.png);
-    background-size: fill;
-    background-size: 200px 200px;
-    animation: scroll-Y-100px 5s linear infinite;
-    pointer-events: none
-} */
-
-.Banner {
-    width: 100%;
-    height: 50px;
-    padding: 24px 16px 48px;
-    /* gap: 10px; */
-}
-
-.GameListContainer {
-    width: 550px;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    /* gap: 10px; */
-    margin: 0 4px;
-}
-
-/* .LinkContainer {
-    padding: 5px 5px;
-    border-radius: var(--BorderRounding);
-    background-color: var(--BoxColor);
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-} */
-
-/* .LinkContainer:hover { */
-    /* scale: (1.2); */
-    /* background-color: var(--BoxHighlightColor); */
-    /* border: var(--BorderStrokeSize) var(--BoxBorderHighlightColor); */
-    /* border-left: 10px solid var(--BoxBorderHighlightColor); */
-/* } */
-
-.VolumeButton {
-    text-decoration: none !important;
-    border-radius: var(--BorderRounding);
-    background-color: var(--BoxColor);
-    /* border: var(--BorderStrokeSize) var(--BoxBorderColor); */
-    /* box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor); */
-}
-
-.PostContainer {
-    width: 100%;
-    gap: 10px;
-    clear: right;
-    background-color: var(--BoxColor);
-    border-radius: var(--BorderRounding);
-    text-decoration: none;
-}
-
-.ImagePostContainer {
-    max-width: 33.33%;
-    max-height: 100%;
-    width: 32%;
-    height: 200px;
-    border-radius: var(--BorderRounding);
-    background-color: var(--BackgroundColor);
-    /* border: 1px solid var(--BoxBorderColor); */
-    text-decoration: none;
-    /* border-left: 5px solid var(--BoxBorderColor); */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    /* transform: skew(-5deg); */
-
-    /* border: var(--BorderStrokeSize) var(--BoxBorderColor); */
-    /* box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor); */
-    border-radius: var(--BorderRounding);
-}
-.ImagePost {
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.ImagePostDate {
-    background-color: var(--BoxBorderColor);
-    text-align: right;
-    padding: 8px !important;
-    margin: 0;
-    margin-top: -2px;
-}
-
-.LinkIcon {
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-}
-
-.Badge {
-    font-size: 0.875rem;
-    background-color: #11111100;
-    border: var(--BorderStrokeSize) var(--BoxBorderColor);
-    border-radius: var(--BorderRounding);
-    padding: 6px 10px;
-    margin-left: auto;
-}
-
-.GameContainer {
-    text-decoration: none;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    padding: 10px;
-    border-radius: var(--BorderRounding);
-    /* border: var(--BorderStrokeSize) var(--BoxBorderColor); */
-    background: #111;
-    transform: translate(0%);
-}
-.GameBG {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    filter: blur(10px) brightness(0.4);
-    background-image: url(GameIcons/TetheredDescent.webp);
-    background-position: center;
-}
-
-i {
-  font-size: 0.875rem;
-  text-align: center;
-}
-
-.LinkButton {
-    text-decoration: none !important;
-    justify-content: center;
-    /* aspect-ratio: 1; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 33.2%;
-    height: 5%;
-    background-color: var(--BoxColor);
-    /* border: var(--BorderStrokeSize) var(--BoxBorderColor); */
-    /* box-shadow: 0px 0px var(--BorderGlowSize) var(--BoxBorderColor); */
-    border-radius: var(--BorderRounding);
-}
-
-.HeaderText {
-    margin: 0px 0px 0px 0px;
-    display: block;
-}
-.HeaderDivider {
-    flex: 1;
-    height: 2px;
-    margin-right: 8px;
-    background-color: var(--DefaultTextColor);
-}
-
-@media screen and (max-width: 1322px) {
-    main {
-        flex-direction: column;
-        /* width: 90%; */
-        /* align-items: stretch; */
-        /* max-width: 1000px; */
-    }
-    .MainContainer {
-        width: 100%;
-    }
-}
-
-/* span,h1,h2,p,marquee,i,a {
-    color: var(--DefaultTextColor);
-    font-size: 0.875rem;
-}
-
-h2 {
-   font-size: 1.5rem; 
-}
-
-span {
-    margin-top: auto;
-    margin-bottom: auto;
-} */
-/* Everything new will be added bellow this line AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
-/* Everything new will be added bellow this line AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
-/* Everything new will be added bellow this line AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
-/* Everything new will be added bellow this line AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
 
 h2 {
     margin: 10px;
@@ -448,6 +224,13 @@ body {
 /* Custom details config*/
 .PinkGlow {
     text-shadow: 0 0 10px #ffffff00, 0 0 20px #ffffff80, 0 0 30px #e6003659, 0 0 40px #e6000000, 0 0 50px #e6004d3d, 0 0 60px #e6004d29, 0 0 70px #e6004d57;
+}
+
+.HeaderDivider {
+    flex: 1;
+    height: 2px;
+    margin-right: 8px;
+    background-color: var(--DefaultTextColor);
 }
 
 .IntoductionCardGif {
