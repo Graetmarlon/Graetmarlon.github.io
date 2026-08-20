@@ -445,3 +445,24 @@ body {
     width: 150px;
     float: left;
 }
+
+/* Marquee config*/
+.MarqueeContent {
+    white-space: nowrap; 
+    overflow: hidden;
+}
+.Marquee {
+    display: inline-block; 
+    animation: marquee 15s linear infinite;
+}
+.MarqueeGradient {
+    mask-image: linear-gradient(to left, transparent, transparent 2%, white);
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
